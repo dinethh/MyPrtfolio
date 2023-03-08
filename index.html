@@ -10,39 +10,51 @@
     <meta name="robot" content="index">
     <meta name="theme-color" content="green">
     <meta name="auther" content="dinethpanditha">
-   <link rel="icon" href="">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/met.png">
 </head>
 <body>
-    <!-- headder -->
-   <header>
-   <nav>
-    <menu>
-        <a class="active" href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-        <a href="">Skills & Tools</a>
-        <a href="">Projects</a>
-        <a href="">About Me</a>
-        <a href="">Galary</a>
-        <a href="">Services</a>
-        <a href="">Contact Me</a>
-     <!-- <div class="hamber">  <ul><li><a href=""><i class="fa fa-align-justify" aria-hidden="true"></i></a></li></ul> </div> -->     
-    </menu>
-   </nav>
-
-   <button id="click">Hire Me</button>
-
-   <aside>
-    <!-- icon menu -->
-    <div class="icon-menu">
+    <header class="container">
+        <nav >
+            <menu class="nav">
+            <a href="">Contact Me</a>
+            <a href="">Services</a>
+            <a href="">Gallery</a>
+            <a href="">About Me</a>
+            <a href="">Projects</a>
+            <a href="">Skills & Tools</a>
+            <a class="active" href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+          <div class="hamber">  <ul><li><a href=""><i class="fa fa-align-justify" aria-hidden="true"></i></a></li></ul> </div>
+           </menu>
+        </nav>
+    
+        <aside class="icon-menu">
+            <ul><li><a href=""><i class="fa fa-whatsapp"></i></a></li></ul>
+            <ul><li><a href=""><i class="fa fa-github"></i></a></li></ul>
+            <ul><li><a href=""><i class="fa fa-linkedin-square"></i></a></li></ul>
+            <ul><li><a href=""><i class="fa fa-facebook-official"></i></a></li></ul>
+            <ul><li><a href=""><i class="fa fa-instagram"></i></a></li></ul>
+        </aside>
+    <!-- ============================ -->
+        <div class="typing-txt">
+            <h1>-<span class="auto-type"></span></h1>
+        </div>
         
-        <ul><li><a href=""><i class="fa fa-whatsapp"></i></a></li></ul>
-        <ul><li><a href=""><i class="fa fa-github"></i></a></li></ul>
-        <ul><li><a href=""><i class="fa fa-linkedin-square"></i></a></li></ul>
-        <ul><li><a href=""><i class="fa fa-facebook-official"></i></a></li></ul>
-        <ul><li><a href=""><i class="fa fa-instagram"></i></a></li></ul>
-        
-    </div>
-   </aside>
-   </header>
+           <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
+           <script>
+            var typed = new Typed(".auto-type", {
+                strings:["Web Developer","Mobile App Developer","UI/UX Designer"],
+                typeSpeed: 50,
+                backSpeed:50,
+                loop: true
+            })
+           </script>
+    <!-- ============================ -->       
+    
+        <button id="click">Hire Me</button>
+      </header> 
+      
 
 </body>
 </html>

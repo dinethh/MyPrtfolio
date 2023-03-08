@@ -1,0 +1,130 @@
+
+*{
+    margin: 0;
+    padding: 0; 
+ }
+ 
+.container{
+ background-image: url('/images/bg.jpg');
+ height: 100vh;
+ background-repeat: no-repeat;
+ width: 100%;
+ background-size: cover;
+ background-position: center;   
+}
+
+.typing-txt {
+    /* width: 100%;
+    height: 100vh; */
+    /* background: #2b323c; */
+    color: #fff;
+    /* display: flex; */
+    /* align-items: left;
+    justify-content: left; */
+    padding-top: 400px;
+    margin-left: 30px;
+    
+/* ===========typing text =================*/
+    }
+    .typing-txt{
+        font-size: 18px;
+        /* font-weight: 600; */
+    }
+    .container span{
+        color: #fff724;
+    }
+ /* ===========hire me button =================*/   
+   button{
+    box-sizing: border-box;
+
+position: absolute;
+width: 200px;
+height: 60px;
+left: 40px;
+top: 520px;
+
+background: #2B2A26;
+border: 2px solid #FCC419;
+border-radius: 30px;
+
+/* //////////// */
+position: absolute;
+ 
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 36px;
+
+color: #FFFFFF;
+   }
+   .container button:hover{
+    background: #FCC419;
+
+ }
+  /* ===========icon menu =================*/
+ .icon-menu{
+    width: 100px;
+   
+    /* background:red ; */
+    /* overflow: auto;    */
+     /*to controal foloat*/
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 0px;
+     gap: 11px;
+     
+     position: absolute;
+     width: 60px;
+     /* height: 3px; */
+     left: 1200px;
+     top: 360px;
+}
+.icon-menu ul{
+    list-style-type: none;
+ }
+.icon-menu ul a{
+  
+    color:black;
+    width: 100%;
+    padding: 10px 10px ;
+    transition: 0.2s;
+    font-size: 30px; 
+    border-radius: 50px;
+    /* text-align: center; */
+ }
+ .icon-menu ul a:hover{
+    background: whitesmoke;
+    }
+
+  /* ===========Navigation menu =================*/
+.nav{
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+.nav a{
+    float: right;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Inter';
+    font-style: normal;
+}
+.nav a:hover{
+  
+    color:  #FCC419;
+}
+.nav a.active{
+/* background-color: #FCC419; */
+/* border-radius: 10px; */
+color:#FCC419;
+
+}
+.nav .hamber{
+    float: left;
+   }
