@@ -5,7 +5,7 @@
  }
  
 .container{
- background-image: url('/images/bg.jpg');
+ background-image: url('/assets/images/bg.jpg');
  height: 100vh;
  background-repeat: no-repeat;
  width: 100%;
@@ -128,3 +128,16 @@ color:#FCC419;
 .nav .hamber{
     float: left;
    }
+
+   .wall{
+    background-image: url('/assets/images/');
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;   
+   }   
+
+   /* ================================skills and tools=================================== */
+
+ 
