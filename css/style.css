@@ -12,6 +12,32 @@
  background-size: cover;
  background-position: center;   
 }
+/* ================================== */
+ /* main topicks */
+ .headlines{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 3rem;
+    /* padding:1rem; */
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.headlines span{
+   color: #fff724;
+}
+
+/* body{
+    background:#111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+} */
+
+section{        /* section margin*/
+    min-height: 100vh;
+    padding:2.5rem;
+}
+/* ============================= */
 
 .typing-txt {
     /* width: 100%;
@@ -21,7 +47,7 @@
     /* display: flex; */
     /* align-items: left;
     justify-content: left; */
-    padding-top: 400px;
+    padding-top: 445px;
     margin-left: 30px;
     
 /* ===========typing text =================*/
@@ -66,7 +92,6 @@ color: #FFFFFF;
   /* ===========icon menu =================*/
  .icon-menu{
     width: 100px;
-   
     /* background:red ; */
     /* overflow: auto;    */
      /*to controal foloat*/
@@ -82,6 +107,7 @@ color: #FFFFFF;
      left: 1200px;
      top: 360px;
 }
+
 .icon-menu ul{
     list-style-type: none;
  }
@@ -101,12 +127,16 @@ color: #FFFFFF;
 
   /* ===========Navigation menu =================*/
 .nav{
-    background-color: #1c1c1c;
+    /* background-color:#2B2A26; */
+    background: linear-gradient(180deg, #000000 0%, rgba(77, 77, 77, 0.697856) 99.97%, rgba(255, 255, 255, 0) 99.98%, rgba(255, 255, 255, 0.03125) 99.99%);
     overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 .nav a{
     float: right;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -114,6 +144,9 @@ color: #FFFFFF;
     font-weight: bold;
     font-family: 'Inter';
     font-style: normal;
+    display: block;
+   
+   
 }
 .nav a:hover{
   
@@ -130,14 +163,91 @@ color:#FCC419;
    }
 
    .wall{
-    background-image: url('/assets/images/');
+    /* background-image: url('/assets/images/background.jpg'); */
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
     background-position: center;   
+    background-color: #000000;
    }   
 
    /* ================================skills and tools=================================== */
 
- 
+ .skillsTools .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;  
+}
+
+.skillsTools .box-container .box{
+    /* width:27rem; */
+    /* margin:4rem 1rem; */
+    /* padding-left: 4rem; */
+    /* border-left: .2rem solid #fff; */
+    position: relative;   
+}
+.skillsTools .box-container .box span{
+    font-size: 1.5rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.skillsTools .box-container .box h3{
+    font-size: 1rem;
+    color:#fff;
+    padding-top: 1.5rem;
+} 
+
+.skillsTools .box-container .box i{
+    position:absolute;
+    top:-0.5rem; left:-1.7rem;
+    height:3rem;
+    width: 3rem;
+    border-radius: 50%;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color:black;
+    background: #fff724;
+}
+
+.skillsTools .box-container .box{
+    /* width:2rem; */
+    margin:2rem 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 0.2rem solid #fff;
+    position: relative;
+    border-style: dotted;
+    
+}
+.skillsTools .img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* padding: 2rem 0; */
+}
+.skillsTools .img-container .logo{
+    border-radius: 1rem;
+    margin: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+.skillsTools .img-container .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.skillsTools .img-container .logo:hover img{
+    transform:scale(1.2);
+}
