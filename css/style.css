@@ -51,28 +51,23 @@ section {
 }
 
 /* ===========hire me button =================*/
-button {
+.hireMe {
     box-sizing: border-box;
-    /* position: absolute; */
     width: 200px;
     height: 60px;
     margin-left: 30px;
-    /* top: 550px; */
     margin-top: 30px;
-
     background: #2B2A26;
     border: 2px solid #FCC419;
     border-radius: 30px;
-
-
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
-
     color: #FFFFFF;
+    /* top: 550px; */
+    /* position: absolute; */
 }
 
 .container button:hover {
@@ -83,20 +78,19 @@ button {
 /* ===========icon menu =================*/
 .icon-menu {
     width: 100px;
-    /* background:red ; */
-    /* overflow: auto;    */
-    /*to controal foloat*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 11px;
-
     position: absolute;
     width: 60px;
-    /* height: 3px; */
     left: 1200px;
     top: 360px;
+    /* background:red ; */
+    /* overflow: auto;    */
+    /*to controal foloat*/
+    /* height: 3px; */
 }
 
 .icon-menu ul {
@@ -138,20 +132,16 @@ button {
     font-family: 'Inter';
     font-style: normal;
     display: block;
-
-
 }
 
 .nav a:hover {
-
     color: #FCC419;
 }
 
 .nav a.active {
+    color: #FCC419;
     /* background-color: #FCC419; */
     /* border-radius: 10px; */
-    color: #FCC419;
-
 }
 
 .nav .hamber {
@@ -183,11 +173,12 @@ button {
 }
 
 .skillsTools .box-container .box {
+    position: relative;
     /* width:27rem; */
     /* margin:4rem 1rem; */
     /* padding-left: 4rem; */
     /* border-left: .2rem solid #fff; */
-    position: relative;
+
 }
 
 .skillsTools .box-container .box span {
@@ -260,13 +251,12 @@ button {
 
 .myProject .row {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     position: absolute;
     margin-top: 70px;
     transform: translate(-50%, -50%);
     padding-left: 75rem;
-
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .myProject .col {
@@ -280,7 +270,7 @@ button {
     background-color: black;
     padding: 20px 70px;
     border-radius: 1rem;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #FCC419;
     border-radius: 20px;
     /* box-shadow: 0 0 20px -6px #FCC419; */
 }
@@ -318,7 +308,9 @@ button {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    border: 2px solid #FCC419;
+    border-radius: 20px;
 }
 
 .myProject .box-container .box:hover {
@@ -345,4 +337,57 @@ button {
 
 .myProject .click-Here img:hover {
     transform: scale(1.2);
+}
+
+/* ============ About Me ============== */
+
+.aboutMe .row-about {
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid #4D4848;
+    border-radius: 20px;
+    width: 30%;
+    height: 30rem;
+    margin-top: 2rem;
+    color: #fff;
+    font-family: initial;
+    font-style: normal;
+
+}
+
+.aboutMe .row-about .col-about h2 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.aboutMe .row-about .col-about p {
+    padding: 1rem;
+}
+
+.aboutMe .downloard-CV {
+    background: #2B2A26;
+    border: 1px solid #FCC419;
+    border-radius: 30px;
+    position: absolute;
+    width: 230px;
+    height: 50px;
+    color: #fff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 10px;
+
+}
+.aboutMe .cv {
+    margin-left: 3.5rem;
+    margin-top: 3rem;
+}
+.aboutMe .downloard-CV i{
+    color: #FCC419;
+}
+
+.aboutMe .downloard-CV:hover {
+    background-color: #524725;
 }
