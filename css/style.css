@@ -297,24 +297,21 @@ button {
 /* start project list  */
 .myProject .box-container {
     display: flex;
-    /* align-items: center;
-    justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-  /* margin-top: 15rem; */
-    padding-left: 3rem;
-    /* width: 25%; */
-
-
+    padding:7rem 0;
 }
 
 .myProject .box-container .box {
     height: 13rem;
     width: 10rem;
-    /* margin:2rem; */
+    margin:2rem;
+    padding: 2rem;
     /* overflow: hidden; */
     cursor: pointer;
-    /* position: absolute; */
-    padding-right: 2rem;
+    position: relative;
+    /* padding-right: 2rem; */
     
 }
 
