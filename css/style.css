@@ -260,8 +260,8 @@ button {
 
 .myProject .row {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    /* align-items: center;
+    justify-content: center; */
     position: absolute;
     margin-top: 70px;
     transform: translate(-50%, -50%);
@@ -274,25 +274,27 @@ button {
     text-align: center;
     color: #000000;
     padding: 2px;
-
 }
 
 .myProject .col .counter-box {
-    background: black;
+    background-color: black;
     padding: 20px 70px;
-    border-radius: 30px;
-    box-shadow: 0 0 20px -6px #FCC419;
+    border-radius: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    /* box-shadow: 0 0 20px -6px #FCC419; */
 }
 
 .myProject .col .counter-box i {
     color: #FCC419;
-    font-size: 50px;
+    font-size: 2rem
 }
 
 .myProject .col .counter-box h2 {
     color: white;
+    font-size: 26px;
+    padding-top: 10px;
 }
-
 
 /* start project list  */
 .myProject .box-container {
@@ -300,19 +302,16 @@ button {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding:7rem 0;
+    padding-top: 7rem;
 }
 
 .myProject .box-container .box {
     height: 13rem;
     width: 10rem;
-    margin:2rem;
-    padding: 2rem;
-    /* overflow: hidden; */
+    margin: 2rem;
     cursor: pointer;
     position: relative;
-    /* padding-right: 2rem; */
-    
+    padding-top: 2rem;
 }
 
 .myProject .box-container .box img {
@@ -331,4 +330,19 @@ button {
     color: white;
     font-weight: 500;
     margin: 10px 0 15px 0;
+}
+
+/* click-Here */
+.myProject .click-Here h5 {
+    color: #fff;
+    font-family: initial;
+}
+
+.myProject .click-Here {
+    padding-left: 50%;
+    padding-top: 3rem;
+}
+
+.myProject .click-Here img:hover {
+    transform: scale(1.2);
 }
