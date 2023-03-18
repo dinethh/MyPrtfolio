@@ -18,12 +18,16 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- loarding logo -->
     <link rel="icon" href="img/met.png">
-
+    <!-- jquery global link -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <!-- <script src="jquery.counterup.min.js"></script> -->
+    <script src="/js/jquery.counterup.min.js"></script>
 </head>
 
-<body>
+<body class="wall">
     <!-- start hedder     -->
     <header class="container">
         <nav> <!--start navigation -->
@@ -34,11 +38,9 @@
                 <a href="">About Me</a>
                 <a href="#myprojects">Projects</a>
                 <a href="#skills&Tools">Skills & Tools</a>
-                <a class="a" href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                <a class="a" href=""> Home</a>
                 <div class="hamber">
-                    <ul>
-                        <li><a href=""><i class="fa fa-align-justify" aria-hidden="true"></i></a></li>
-                    </ul>
+                    <a class="active" href=""><i class="fa fa-align-justify" aria-hidden="true"></i> Photofolio</a>
                 </div>
             </menu>
         </nav> <!--end navigation -->
@@ -82,12 +84,12 @@
     <!-- End hedder -->
 
     <!-- start main -->
-    <main class="wall">
+    <main>
 
         <!-- start skill & tools section     -->
         <section class="skillsTools" id="skills&Tools">
 
-            <h1 class="headlines"> My <span>Skills</span> & <span>Tools</span></h1>
+            <!-- <h1 class="headlines"> My <span>Skills</span> & <span>Tools</span></h1> -->
 
             <div class="box-container">
 
@@ -206,11 +208,100 @@
 
         <!-- Start My Projects     -->
         <section class="myProject" id="myprojects">
-         
+            <!-- <h1 class="headlines"> My <span>Projects</span> -->
+
+            <div class="row"> <!--counter start-->
+
+                <div class="col">
+                    <div class="counter-box">
+                        <i class="fa fa-mobile"></i>
+                        <h2 class="counter">100</h2>
+                        <!-- <h4>Mobile Application</h4> -->
+                    </div>
+                </div>
+                <!-- ----------------------------- -->
+                <div class="col">
+                    <div class="counter-box">
+                        <i class="fa fa-desktop"></i>
+                        <h2 class="counter">200</h2>
+                        <!-- <h4>Mobile Application</h4> -->
+                    </div>
+                </div>
+                <!-- ----------------------------- -->
+                <div class="col">
+                    <div class="counter-box">
+                        <i class="fa fa-code"></i>
+                        <h2 class="counter">300</h2>
+                        <!-- <h4>Mobile Application</h4> -->
+                    </div>
+                </div>
+            </div> <!--counter end-->
+          <!-- --------------------------------------------------   -->
+            <!--start project list-->
+                
+            <div class="box-container"><!-- project 1 -->
+                <div class="box">
+                   
+                    <!-- <a href="assingment/CSS/Case_01/index.html" target="_blank"> -->
+                        <img src="/assets/images/project.jpg" alt="">
+                    </a>
+                    <div class="projectName">
+                       <h5> - Sample Project -</h5>
+                    </div>
+                </div>
+                </div>
+
+                <div class="box-container"><!-- project 2 -->
+                    <div class="box">
+                       
+                        <!-- <a href="assingment/CSS/Case_01/index.html" target="_blank"> -->
+                            <img src="/assets/images/project.jpg" alt="">
+                        </a>
+                        <div class="projectName">
+                            <h5> - Sample Project -</h5>
+                        </div>
+                    </div>
+                    </div> 
+                    
+                    <div class="box-container"><!-- project 3 -->
+                        <div class="box">
+                           
+                            <!-- <a href="assingment/CSS/Case_01/index.html" target="_blank"> -->
+                                <img src="/assets/images/project.jpg" alt="">
+                            </a>
+                            <div class="projectName">
+                                <h5> - Sample Project -</h5>
+                            </div>
+                        </div>
+                        </div>  
+                        
+                        <div class="box-container"><!-- project 4 -->
+                            <div class="box">
+                               
+                                <!-- <a href="assingment/CSS/Case_01/index.html" target="_blank"> -->
+                                    <img src="/assets/images/project.jpg" alt="">
+                                </a>
+                                <div class="projectName">
+                                    <h5> - Sample Project -</h5>
+                                </div>
+                            </div>
+                            </div>            
+            <!-- ---------------------------------------------------------- -->
+                <!--end project list-->
         </section>
-        <!-- end My Projects     -->
+        <!-- end My Projects-->
     </main>
     <!--end main -->
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
 </body>
 
 </html>
