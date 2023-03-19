@@ -460,6 +460,60 @@ section {
     font-weight: 10;
     font-size: 18px;
 }
-.col-about .ic li:hover{
+
+.col-about .ic li:hover {
     transform: scale(1.1);
+}
+
+/* ============== services =============== */
+
+.myservices .rowService {
+    box-sizing: border-box;
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+
+.myservices .rowService .colService {
+    border: 2px solid #4D4848;
+    width: 30%;
+    height: 20rem;
+    margin-right: 1.5rem;
+    padding: 1rem;
+    border-radius: 30px;
+    margin-top: 3rem;
+}
+
+.myservices .rowService .colService img {
+    width: 100px;
+    height: 100px;
+    margin-left: 7rem;
+    margin-top: 4rem;
+}
+.myservices .rowService .colService img:hover{
+    transform: scale(1.1);
+}
+
+.myservices .rowService .colService h3 {
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+.myservices .rowService .colService .more-details {
+    background: #101010;
+    border: 1.5px solid #4D4848;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 30px;
+    color: #fff;
+    margin-left:7rem;
+    margin-top: 1rem;
+    width: 100px;
+   height: 30px;
+    
+}
+.myservices .rowService .colService .more-details:hover {
+   background-color:#524725;
 }
