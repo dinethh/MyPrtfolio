@@ -20,7 +20,6 @@
 } */
 
 section {
-    /* section margin: ; */
     min-height: 100vh;
     padding: 2.5rem;
 }
@@ -343,16 +342,22 @@ section {
 
 .aboutMe .row-about {
     box-sizing: border-box;
-    position: absolute;
-    border: 2px solid #4D4848;
-    border-radius: 20px;
-    width: 30%;
-    height: 30rem;
     margin-top: 2rem;
     color: #fff;
     font-family: initial;
     font-style: normal;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
 
+.aboutMe .row-about .col-about {
+    border: 2px solid #4D4848;
+    width: 30%;
+    height: 30rem;
+    margin-right: 1.5rem;
+    padding: 1rem;
+    border-radius: 30px;
 }
 
 .aboutMe .row-about .col-about h2 {
@@ -362,6 +367,9 @@ section {
 
 .aboutMe .row-about .col-about p {
     padding: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 10;
 }
 
 .aboutMe .downloard-CV {
@@ -374,20 +382,81 @@ section {
     color: #fff;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     margin: 10px;
 
 }
+
 .aboutMe .cv {
-    margin-left: 3.5rem;
-    margin-top: 3rem;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
 }
-.aboutMe .downloard-CV i{
+
+.aboutMe .downloard-CV i {
     color: #FCC419;
 }
 
 .aboutMe .downloard-CV:hover {
     background-color: #524725;
+}
+
+/* personal info */
+.col-about li {
+    list-style: none;
+}
+
+.col-about .info i {
+    color: #FCC419;
+    font-size: 30px;
+    margin: 15px;
+}
+
+.col-about .info a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 10;
+    font-size: 18px;
+}
+
+.col-about .info a:hover {
+    color: #FCC419;
+}
+
+.col-about .info li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 10;
+    font-size: 18px;
+}
+
+.col-about .interest i {
+    color: #FCC419;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.col-about .interest h5 {
+    font-size: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* my expertist */
+.col-about img {
+    width: 2.5rem;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.col-about li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 10;
+    font-size: 18px;
 }
