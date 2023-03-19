@@ -460,3 +460,6 @@ section {
     font-weight: 10;
     font-size: 18px;
 }
+.col-about .ic li:hover{
+    transform: scale(1.1);
+}
