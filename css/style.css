@@ -13,11 +13,7 @@
 }
 
 /* ================================== */
-/* body{
-    background:#111;
-    overflow-x: hidden;
-    padding-left: 35rem;
-} */
+
 
 section {
     min-height: 100vh;
@@ -103,7 +99,6 @@ section {
     transition: 0.2s;
     font-size: 30px;
     border-radius: 50px;
-    /* text-align: center; */
 }
 
 .icon-menu ul a:hover {
@@ -112,7 +107,6 @@ section {
 
 /* ===========Navigation menu =================*/
 .nav {
-    /* background-color:#2B2A26; */
     background: linear-gradient(180deg, #000000 0%, rgba(77, 77, 77, 0.697856) 99.97%, rgba(255, 255, 255, 0) 99.98%, rgba(255, 255, 255, 0.03125) 99.99%);
     overflow: hidden;
     position: fixed;
@@ -127,7 +121,7 @@ section {
     padding: 14px 20px;
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-family: 'Inter';
     font-style: normal;
     display: block;
@@ -151,7 +145,6 @@ section {
 
 
 .wall {
-    /* background-image: url('/assets/images/background.jpg'); */
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -173,11 +166,6 @@ section {
 
 .skillsTools .box-container .box {
     position: relative;
-    /* width:27rem; */
-    /* margin:4rem 1rem; */
-    /* padding-left: 4rem; */
-    /* border-left: .2rem solid #fff; */
-
 }
 
 .skillsTools .box-container .box span {
@@ -223,7 +211,6 @@ section {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* padding: 2rem 0; */
 }
 
 .skillsTools .img-container .logo {
@@ -307,7 +294,6 @@ section {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* border-radius: 1rem; */
     border: 2px solid #FCC419;
     border-radius: 20px;
 }
