@@ -450,9 +450,32 @@ section {
 .col-about .ic li:hover {
     transform: scale(1.1);
 }
+
 /* ============== gallery =============== */
 
-        /* gallery here */
+.mygallery .Gallery {
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.mygallery .Gallery .gSlider {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.mygallery .Gallery .gSlider img {
+    width: 100%;
+
+}
+
+.mygallery .Gallery::-webkit-scrollbar {
+    display: none;
+}
 
 /* ============== services =============== */
 
@@ -511,28 +534,25 @@ section {
 
 /* ============== contact info =============== */
 
-.contactInfo .rowContact{
+.contactInfo .rowContact {
     display: flex;
     flex-direction: row;
     position: relative;
     margin-top: 3rem;
     color: #fff;
-    
-}
-.contactInfo .rowContact .colInfo{
-   
-   
 
 }
-.contactInfo .rowContact .colInfo i{
-    color:  #FCC419;
-    font-size: 40px;  
+
+.contactInfo .rowContact .colInfo {}
+
+.contactInfo .rowContact .colInfo i {
+    color: #FCC419;
+    font-size: 40px;
     padding-top: 2rem;
 }
-.contactInfo .rowContact .colInfo li{
+
+.contactInfo .rowContact .colInfo li {
     list-style: none;
     text-decoration: none;
-    
+
 }
-
-
