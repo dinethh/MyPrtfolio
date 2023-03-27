@@ -112,6 +112,8 @@ section {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
+    transition: top 0.3s;
 }
 
 .nav a {
@@ -121,7 +123,6 @@ section {
     padding: 14px 20px;
     text-decoration: none;
     font-size: 14px;
-    /* font-weight: bold; */
     font-family: 'Inter';
     font-style: normal;
     display: block;
@@ -142,7 +143,6 @@ section {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-display: inherit;
 }
-
 
 .wall {
     height: 100vh;
@@ -177,9 +177,13 @@ section {
 }
 
 .skillsTools .box-container .box h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     padding-top: 1.5rem;
+}
+
+.skillsTools .box-container .box h3:hover {
+    transform: scale(1.1);
 }
 
 .skillsTools .box-container .box i {
@@ -236,40 +240,44 @@ section {
 /* ================================My Projects=================================== */
 
 .myProject .row {
+    box-sizing: border-box;
+    position: relative;
     display: flex;
-    position: absolute;
-    margin-top: 70px;
-    transform: translate(-50%, -50%);
-    padding-left: 75rem;
-    /* align-items: center;
-    justify-content: center; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 1rem; */
 }
 
 .myProject .col {
     flex-direction: column;
     text-align: center;
     color: #000000;
-    padding: 2px;
+    padding: 1rem;
 }
 
 .myProject .col .counter-box {
     background-color: black;
-    padding: 20px 70px;
+    padding: 5px 100px;
     border-radius: 1rem;
-    border: 1px solid #FCC419;
-    border-radius: 20px;
+    border: 0.1rem solid#4D4848;
     /* box-shadow: 0 0 20px -6px #FCC419; */
 }
 
 .myProject .col .counter-box i {
     color: #FCC419;
-    font-size: 2rem
+    font-size: 50px;
+    margin-top: 5px;
 }
 
 .myProject .col .counter-box h2 {
     color: white;
-    font-size: 26px;
-    padding-top: 10px;
+    font-size: 30px;
+    margin-top: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 300;
+    text-shadow:0 0 20px -6px #FCC419;
 }
 
 /* start project list  */
@@ -278,24 +286,25 @@ section {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
 }
 
 .myProject .box-container .box {
-    height: 13rem;
-    width: 10rem;
+    height: 15rem;
+    width: 10.7rem;
     margin: 2rem;
     cursor: pointer;
     position: relative;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
 
 .myProject .box-container .box img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 2px solid #FCC419;
-    border-radius: 20px;
+    border: 1px solid #4D4848;
+    border-radius: 10px;
+    border: 0.2rem solid#4D4848;
 }
 
 .myProject .box-container .box:hover {
@@ -303,25 +312,30 @@ section {
 }
 
 .myProject .box-container .projectName h5 {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    font-weight: 500;
+    font-weight: 10;
     margin: 10px 0 15px 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 10;
 }
 
 /* click-Here */
 .myProject .click-Here h5 {
     color: #fff;
-    font-family: initial;
+
 }
 
 .myProject .click-Here {
-    padding-left: 50%;
-    padding-top: 3rem;
+    padding-left: 48%;
+    padding-top: 2.5rem;
 }
 
 .myProject .click-Here img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    /* transform: skewY(20deg); */
 }
 
 /* ============ About Me ============== */
@@ -452,11 +466,17 @@ section {
 }
 
 /* ============== gallery =============== */
+.mygallery {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .mygallery .Gallery {
     width: 900px;
     display: flex;
     overflow-x: scroll;
+
 }
 
 .mygallery .Gallery .gSlider {
@@ -470,11 +490,29 @@ section {
 
 .mygallery .Gallery .gSlider img {
     width: 100%;
+    border-radius: 30px;
+}
 
+.mygallery .Gallery .gSlider img:hover {
+    transform: scale(0.9);
 }
 
 .mygallery .Gallery::-webkit-scrollbar {
     display: none;
+}
+
+.Gallery .swap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+#backButton,
+#forwardButton {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
 }
 
 /* ============== services =============== */
