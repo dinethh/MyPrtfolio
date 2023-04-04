@@ -307,10 +307,8 @@ a:hover {
     color: white;
     font-weight: 10;
     margin: 10px 0 15px 0;
-
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 10;
 }
 
 /* click-Here */
@@ -318,15 +316,12 @@ a:hover {
     color: #fff;
 
 }
-
 .myProject .click-Here {
     padding-left: 48%;
     padding-top: 2.5rem;
 }
-
 .myProject .click-Here img:hover {
     transform: scale(1.1);
-    /* transform: skewY(20deg); */
 }
 
 /* ============ About Me ============== */
@@ -567,21 +562,44 @@ a:hover {
     display: flex;
     flex-direction: row;
     position: relative;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     color: #fff;
-
+    margin-bottom: 10rem;
+}
+.contactInfo .rowContact .colInfo {
+    width: 30rem;
+    /* background-color:gray; */
+    margin-left: 4rem;
+    margin-bottom: 10rem;
 }
 
-.contactInfo .rowContact .colInfo {}
+.contactInfo .topic h2{
+ color: white;
+ margin-bottom: 3rem;
+}
+
+
 
 .contactInfo .rowContact .colInfo i {
     color: #FCC419;
     font-size: 40px;
     padding-top: 2rem;
+    margin-left: 4rem;
 }
 
 .contactInfo .rowContact .colInfo li {
     list-style: none;
     text-decoration: none;
+    font-size: 20px;
 
 }
+.contactInfo .rowContact .colInfo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* =============footer============= */
+footer{
+    background: linear-gradient(180deg, #000000 0%, rgba(77, 77, 77, 0.697856) 99.97%, rgba(255, 255, 255, 0) 99.98%, rgba(255, 255, 255, 0.03125) 99.99%);
+    
+    }
