@@ -1,0 +1,52 @@
+/*select all the h1s inside sections*/
+/*change color to blue*/
+/*change font-size to 40px*/
+section h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+/*select all the button inside the section if a button is just after to a paragraph   */
+/*change color to red*/
+/*change font-size to 50px*/
+section p+button {
+    color: red;
+    font-size: 50px;
+}
+
+/*select the second item of the list if the list is inside a section and just after a paragraph */
+/*change color to deeppink*/
+/*change font-size to 30px*/
+section p+ul>li:nth-child(2){
+    color: deeppink;
+    font-size: 30px;
+}
+
+/*Select the first letter of all h2s   */
+/* change the color to green  */
+/* change the font size to 90px  */
+h2::first-letter{
+    color: green;
+    font-size: 90px;
+}
+
+/*select the last para */
+/*set a border of 2px and color black */
+/* set a mix color with red and orange   */
+body>p:last-of-type{
+    border: 2px solid black;
+    background: linear-gradient(to left, orange, purple);
+}
+
+/* select the form*/
+/* change all the border colors of the input fields */
+/* change all the placeholder colors of the input fields */
+/* change the file upload button colors into modern colors - give it a modern look and feelg */
+form input{
+    border:  2px solid black;
+}
+
+form input:placeholder{
+    border:  2px solid black;
+}
+

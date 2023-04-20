@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case2</title>
+    <link rel="stylesheet" href="/Assignment/css-Assignment/normalize.css">
+    <link rel="stylesheet" href="/Assignment/css-Assignment/case-2/css/fontawsome/css/all.min.css">
+    <style>
+        main {
+            height: 100vh;
+            width: 99.7%;
+            position: relative;
+        }
+        head {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        nav {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            border: 2px solid black;
+        }
+        a {
+            position: relative;
+            float: right;
+            color: black;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: bold;
+            display: block;
+            font-style: normal;
+            text-decoration: none;
+            padding-right: 30px;
+        }
+        .dash {
+            border: 1px solid black;
+            position: relative;
+            height: auto;
+            width: 100%;
+        }
+        #dashboard {
+            position: absolute;
+            top: 0;
+            width: 200px;
+            bottom: 0;
+            background-color: purple;
+            border: 1px solid black;
+        }
+        section>p {
+            padding-left: 203px;
+        }
+        ul {
+            list-style-type: none;
+            padding-top: 20px;
+            position: absolute;
+        }
+        li > a {
+            display: block;
+            color:white;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        .grid{
+            background-color: white;
+        }
+        .grid .rowGrid{
+            /* box-sizing: border-box; */
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            color: #fff;
+            margin-left: 200px;
+        }
+        .grid .rowGrid .colGrid{
+            border: 2px solid #4D4848;
+            width: 35%;
+            height: 15rem;
+            /* border-radius: 30px; */
+        }
+        .grid .rowGrid .colGrid .primg{
+            position: relative;
+            padding-left: 100px;
+            padding-top: 50px;
+        }
+        .foot{
+            background-color: #4D4848;
+            position: absolute;
+            width: 99.9%;
+            border: 1px solid black;
+        }
+        h5{
+            color: #fff;
+            padding-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="head" id="ijse">
+            <nav class="nav">
+                <a href="#About"><i class="fa-solid fa-user"></i> About Us</a>
+                <a href="#Contact"><i class="fa-solid fa-phone"></i> Contacts</a>
+                <a href="#services"><i class="fa-solid fa-file"></i> Services</a>
+                <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+                <div>
+                    <img src="/Assignment/css-Assignment/case-2/images/ijse.png" alt="" width="150px" height=50px>
+                </div>
+            </nav>
+        </header>
+        <!-- end header -->
+        <section class="dash">
+            <section class="grid">
+                <div class="rowGrid">
+                    <div class="colGrid">
+                        <img class="primg" src="/Assignment/css-Assignment/case-2/images/monkey.gif" alt="" width="130px" height="150px">
+                    </div>
+                    <div class="colGrid">
+                        <img class="primg"  src="/Assignment/css-Assignment/case-2/images/monkey.gif" alt="" width="130px" height="150px">
+                    </div>
+                    <div class="colGrid">
+                        <img class="primg"  src="/Assignment/css-Assignment/case-2/images/monkey.gif" alt="" width="150px" height="150px">
+                    </div>
+                </div>
+            </section>
+            <div id="dashboard">
+                <ul>
+                    <li> <a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#services"><i class="fa-solid fa-file"></i> Services</a></li>
+                    <li><a href="#Contact"><i class="fa-solid fa-phone"></i> Contacts</a></li>
+                    <li><a href="#About"><i class="fa-solid fa-user"></i> About Us</a></li>
+                </ul>
+            </div>
+        
+           <p>
+            Phasellus non lobortis urna. Nam pulvinar libero ac feugiat gravida. Cras placerat est sapien, eget tempor ipsum luctus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla lacinia justo non risus suscipit, vel vulputate magna semper. Integer nunc diam, tempor in semper sit amet, egestas eu diam. Donec tincidunt, lectus id faucibus efficitur, urna odio cursus felis, at porttitor ante mi nec tortor. Pellentesque molestie mi at mauris ultrices, a ornare turpis mollis. Praesent ultrices aliquam eros non iaculis. Curabitur cursus lacinia sem id rhoncus. Etiam cursus augue at risus congue finibus. Nulla pharetra quam scelerisque nisi tincidunt rutrum. Mauris posuere gravida augue, id lacinia ex ornare nec. Maecenas velit purus, varius lacinia neque eu, accumsan rutrum risus. Sed eu mollis tortor. <br>
+            Phasellus non lobortis urna. Nam pulvinar libero ac feugiat gravida. Cras placerat est sapien, eget tempor ipsum luctus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla lacinia justo non risus suscipit, vel vulputate magna semper. Integer nunc diam, tempor in semper sit amet, egestas eu diam. Donec tincidunt, lectus id faucibus efficitur, urna odio cursus felis, at porttitor ante mi nec tortor. Pellentesque molestie mi at mauris ultrices, a ornare turpis mollis. Praesent ultrices aliquam eros non iaculis. Curabitur cursus lacinia sem id rhoncus. Etiam cursus augue at risus congue finibus. Nulla pharetra quam scelerisque nisi tincidunt rutrum. Mauris posuere gravida augue, id lacinia ex ornare nec. Maecenas velit purus, varius lacinia neque eu, accumsan rutrum risus. Sed eu mollis tortor. <br><br><br>
+            Phasellus non lobortis urna. Nam pulvinar libero ac feugiat gravida. Cras placerat est sapien, eget tempor ipsum luctus a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla lacinia justo non risus suscipit, vel vulputate magna semper. Integer nunc diam, tempor in semper sit amet, egestas eu diam. Donec tincidunt, lectus id faucibus efficitur, urna odio cursus felis, at porttitor ante mi nec tortor. Pellentesque molestie mi at mauris ultrices, a ornare turpis mollis. Praesent ultrices aliquam eros non iaculis. Curabitur cursus lacinia sem id rhoncus. Etiam cursus augue at risus congue finibus. Nulla pharetra quam scelerisque nisi tincidunt rutrum. Mauris posuere gravida augue, id lacinia ex ornare nec. Maecenas velit purus, varius lacinia neque eu, accumsan rutrum risus. Sed eu mollis tortor.  <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada nulla ac porta euismod. Suspendisse ac odio ut velit ornare convallis. Vivamus faucibus massa eget sagittis tincidunt. Nam vel est erat. Proin ut nisl velit. Donec gravida magna magna, tempor commodo nibh imperdiet non. Suspendisse maximus lacinia cursus. Vivamus at pharetra lacus. Nunc sollicitudin ipsum at nisi pulvinar accumsan. Maecenas tincidunt enim mi, nec mollis felis lobortis congue. Maecenas malesuada leo elit, tristique gravida dolor dictum in. Integer porta id arcu sed aliquam. Mauris mattis quam et eros hendrerit eleifend.
+           
+        </p>
+        </section>
+        <footer class="foot">
+            <h5>Developed by IJSE</h5>
+        </footer>
+    </main>
+</body>
+</html>
