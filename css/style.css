@@ -3,6 +3,9 @@
     padding: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 
 html {
     scroll-behavior: smooth;
@@ -51,7 +54,7 @@ section {
     background: #2B2A26;
     border: 2px solid #FCC419;
     border-radius: 30px;
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
@@ -63,6 +66,10 @@ section {
 
 .container button:hover {
     background: #FCC419;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+
 
 }
 
@@ -94,12 +101,13 @@ section {
     padding: 10px 10px;
     transition: 0.2s;
     font-size: 30px;
-    border-radius: 50px;
+    border-radius: 100%;
 }
 
 .icon-menu ul a:hover {
-    background: whitesmoke;
-}
+    /* background:yellow; */
+    color: #BA8B02;
+   }
 
 /* ===========Navigation menu =================*/
 .nav {
@@ -122,11 +130,14 @@ section {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-style: normal;
     display: block;
+    transition: all linear 0.5s;
 }
-
-.nav .active,
 a:hover {
     color: #FCC419;
+}
+.active{
+  background-color: #FCC419;
+  
 }
 
 .nav .hamber a {
@@ -135,6 +146,7 @@ a:hover {
     font-style: italic;
     color: #FCC419;
 }
+/* end navigation */
 
 .wall {
     height: 100vh;
@@ -455,54 +467,46 @@ a:hover {
 }
 
 /* ============== gallery =============== */
-/* .mygallery {
+.mygallery{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
 
-.mygallery .Gallery {
+}
+.gallery{
     width: 900px;
     display: flex;
-    overflow-x: scroll;
-
+    overflow-x: scroll;   
 }
-
-.mygallery .Gallery .gSlider {
+.gallery div{
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 20px;
+   grid-gap:20px;
     padding: 10px;
     flex: none;
 }
+.gallery div img{
+    width: 100%;
 
-.mygallery .Gallery .gSlider img {
-    width: 300px;
-    border-radius: 30px;
 }
-
-.mygallery .Gallery .gSlider img:hover {
-    transform: scale(0.9);
+.gallery div img:hover{
+  transform: scale(1.5);
 }
-
-.mygallery .Gallery::-webkit-scrollbar {
+.gallery::-webkit-scrollbar{
     display: none;
 }
-
-.Gallery .swap {
+.gallery-scroll{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10% auto;
 }
-
-#backButton,
-#forwardButton {
+#back-btn,#forward-btn{
     width: 50px;
     cursor: pointer;
     margin: 40px;
-} */
+}
 
 /* ============== services =============== */
 
@@ -604,7 +608,7 @@ a:hover {
     font-size: 30px;
     color: #fff;
     padding-right: 2rem;
-  }
+}
 
 
 
@@ -664,11 +668,8 @@ a:hover {
 
 .colInfo form .btn:hover {
     background: #232526;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 1.5px solid #FCC419;
     color: #F1C40F;
 }
@@ -683,15 +684,12 @@ footer {
 background: -webkit-linear-gradient(to right, #434343, #000000);  
 background: linear-gradient(to right, #434343, #000000);  */
 
-    background: #232526;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-    height: 100px;
+    height:50px;
     position: relative;
     bottom: 0;
     margin: auto;
@@ -728,9 +726,7 @@ background: linear-gradient(to right, #434343, #000000);  */
 }
 
 footer>h5 {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    text-align: center;
+   text-align: center;
     color: rgb(228, 222, 222);
-    bottom: 20px;
-    margin: auto;
+    padding-bottom: 10px;
 }
