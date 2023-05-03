@@ -1,0 +1,44 @@
+section {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+    right: 230px;
+}
+section>div{
+    position: relative;
+    height: 50px;
+    left: 0;
+     transition: all 2s;
+    background: #7400ff;
+}
+section>div:hover{
+    left: 230px;
+    transition: all 1s;
+}
+div>h1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin: auto;
+    height: max-content;
+    width: max-content;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+div>i{
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+}
