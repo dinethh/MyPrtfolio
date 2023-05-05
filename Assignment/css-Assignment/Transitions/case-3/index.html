@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition case-3</title>
+    <style>
+      
+        div {
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            animation-name: box-ani;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            background-color: aqua;
+            animation-play-state: running;
+        }
+
+        @keyframes box-ani {
+
+            /* from {
+                background-color:red;
+                border: 10px solid black;
+            }
+
+            to {
+                background-color: blue;
+                border: 10px solid black;
+            } */
+            0% {
+                background-color: red;
+                margin: 0px 0px 0px 0px;
+            }
+
+            25% {
+                background-color: orange;
+                margin: 0px 0px 0px 1000px;
+                transform: rotate(90deg);
+            }
+
+            50% {
+                background-color: yellow;
+                margin: 490px 0px 0px 1000px;
+                transform: rotate(180deg);
+            }
+
+            75% {
+                background-color: purple;
+                margin: 490px 0px 0px 0px;
+                transform: rotate(270deg);
+            }
+
+            100% {
+                background-color: blue;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
