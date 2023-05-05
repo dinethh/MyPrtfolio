@@ -3,8 +3,22 @@
     padding: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-body::-webkit-scrollbar{
-    display: none;
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FCC419;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 html {
@@ -18,6 +32,7 @@ html {
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 section {
@@ -107,7 +122,7 @@ section {
 .icon-menu ul a:hover {
     /* background:yellow; */
     color: #BA8B02;
-   }
+}
 
 /* ===========Navigation menu =================*/
 .nav {
@@ -132,12 +147,14 @@ section {
     display: block;
     transition: all linear 0.5s;
 }
+
 a:hover {
     color: #FCC419;
 }
-.active{
-  background-color: #FCC419;
-  
+
+.active {
+    background-color: #FCC419;
+
 }
 
 .nav .hamber a {
@@ -146,6 +163,7 @@ a:hover {
     font-style: italic;
     color: #FCC419;
 }
+
 /* end navigation */
 
 .wall {
@@ -467,42 +485,50 @@ a:hover {
 }
 
 /* ============== gallery =============== */
-.mygallery{
+.mygallery {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
 }
-.gallery{
+
+.gallery {
     width: 900px;
     display: flex;
-    overflow-x: scroll;   
+    overflow-x: scroll;
 }
-.gallery div{
+
+.gallery div {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
-   grid-gap:20px;
+    grid-gap: 20px;
     padding: 10px;
     flex: none;
 }
-.gallery div img{
+
+.gallery div img {
     width: 100%;
 
 }
-.gallery div img:hover{
-  transform: scale(1.5);
+
+.gallery div img:hover {
+    transform: scale(1.5);
 }
-.gallery::-webkit-scrollbar{
+
+.gallery::-webkit-scrollbar {
     display: none;
 }
-.gallery-scroll{
+
+.gallery-scroll {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10% auto;
 }
-#back-btn,#forward-btn{
+
+#back-btn,
+#forward-btn {
     width: 50px;
     cursor: pointer;
     margin: 40px;
@@ -684,12 +710,15 @@ footer {
 background: -webkit-linear-gradient(to right, #434343, #000000);  
 background: linear-gradient(to right, #434343, #000000);  */
 
-background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-    height:50px;
+    height: 50px;
     position: relative;
     bottom: 0;
     margin: auto;
@@ -726,7 +755,7 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
 }
 
 footer>h5 {
-   text-align: center;
+    text-align: center;
     color: rgb(228, 222, 222);
     padding-bottom: 10px;
 }
