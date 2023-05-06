@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Transition case-6</title>
+
+    <style>
+        body {
+            background-image: url(images/sky.jpg);
+            overflow: hidden;
+        }
+
+        /*  city */
+        body>main>div:nth-child(1) {
+            display: flex;
+            position: absolute;
+            bottom: 13vw;
+            animation-name: city;
+            animation-duration: 5s;
+        }
+
+        body>main>div:nth-child(1)>img {
+            height: 40vh;
+        }
+
+        @keyframes city {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -200%;
+            }
+        }
+
+        /* Road */
+        body>main>div:nth-child(2) {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            animation-name: road;
+            animation-duration: 5s;
+        }
+
+        @keyframes road {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -200%;
+            }
+        }
+
+        body>main>div:nth-child(2)>img {
+            height: 13vw;
+        }
+
+        /* Car */
+        body>main>div:nth-child(3) {
+            position: absolute;
+            height: 30%;
+            width: 100%;
+            bottom: 0;
+        }
+
+        body>main>div:nth-child(3)>img {
+            position: absolute;
+            width: 30%;
+            left: 0;
+            right: 0;
+            bottom: 15vh;
+            margin: auto;
+        }
+
+        /* Weels */
+        body>main>div:nth-child(4) {
+            position: absolute;
+            height: 30%;
+            width: 100%;
+            bottom: 0;
+        }
+
+        body>main>div:nth-child(4)>img {
+            position: absolute;
+            width: 6%;
+            left: 0;
+            right: 0;
+            bottom: 16vh;
+            margin: auto;
+            animation-name: wheel;
+            animation-duration: 5s;
+        }
+
+        @keyframes wheel {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(1500deg);
+            }
+        }
+
+        body>main>div:nth-child(4)>img:nth-child(1) {
+            position: absolute;
+            left: 17vw;
+            right: 0;
+            margin: auto;
+        }
+
+        body>main>div:nth-child(4)>img:nth-child(2) {
+            position: absolute;
+            left: 0;
+            right: 19vw;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- city -->
+        <div>
+            <img src="images/city.png" alt="">
+            <img src="images/city.png" alt="">
+            <img src="images/city.png" alt="">
+        </div>
+        <!-- road -->
+        <div>
+            <img src="images/road.jpg" alt="">
+            <img src="images/road.jpg" alt="">
+        </div>
+        <!-- car -->
+        <div>
+            <img src="images/car.png" alt="">
+        </div>
+        <!-- weels -->
+        <div>
+            <img src="images/wheel.png" alt="">
+            <img src="images/wheel.png" alt="">
+        </div>
+    </main>
+</body>
+
+</html>
