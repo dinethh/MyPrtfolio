@@ -32,7 +32,7 @@ html {
     width: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+     background-attachment: fixed; 
 }
 
 section {
@@ -513,7 +513,8 @@ a:hover {
 }
 
 .gallery div img:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
+
 }
 
 .gallery::-webkit-scrollbar {
