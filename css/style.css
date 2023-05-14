@@ -10,7 +10,14 @@ section {
 }
 
 body {
-    background-color: black;
+   height: 100vh;
+    background-image: url("/assets/images/bbg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    position: relative;
 }
 
 /* head lines style */
@@ -51,13 +58,41 @@ html {
 body>header>menu {
     position: relative;
     height: 100vh;
- background-image: url("/assets/images/bbg.jpg"); 
+    background-repeat: repeat;
+    animation: snoww 2s linear infinite;
     background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 0.5s;
-    position: relative;
+    background: url(/assets/images/snow.png);
+
+}
+
+@keyframes snoww {
+    0% {
+        background-position: 50px 50px;
+    }
+
+    20% {
+        background-position: 100px 100px;
+    }
+
+    30% {
+        background-position: 150px 150px;
+    }
+
+    40% {
+        background-position: 200px 200px;
+    }
+
+    60% {
+        background-position: 250px 250px;
+    }
+
+    80% {
+        background-position: 300px 300px;
+    }
+
+    100% {
+        background-position: 350px 350px;
+    }
 
 }
 
@@ -68,12 +103,6 @@ body>header>menu>nav {
     padding: 10px 0;
     align-items: center;
     justify-content: space-between;
-
-    /* position: fixed;
-    top: 0;
-    z-index: 1;
-    background: linear-gradient(180deg, #000000 0%, rgba(77, 77, 77, 0.697856) 99.97%, rgba(255, 255, 255, 0) 99.98%, rgba(255, 255, 255, 0.03125) 99.99%);
-    border-radius: 30px; */
 }
 
 body>header>menu>nav>ul>li {
@@ -123,8 +152,14 @@ body>header>menu>div>a {
     font-weight: bold;
     color: black;
     display: inline-block;
-    margin: 30px 0;
+    margin: 60px 0;
     border-radius: 10px;
+    background: linear-gradient(to left, white 50%, #FCC419 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+}
+body>header>menu>div>a:hover {
+    background-position: left;
 }
 
 body>header>menu .images {
@@ -137,8 +172,12 @@ body>header>menu .images {
     /* border-bottom: 8px solid #FCC419;
     border-style: double;
     border-bottom-right-radius: 100%; */
-    background-color: red;
-    background: none;
+    /* background-color: gold; */
+}
+.sss{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
 }
 
 body>header>menu .images>img {
@@ -161,26 +200,27 @@ body>header>menu .images:hover .me {
 
 
 /* start Social icon Menu */
-body>header>aside {
+/* =========================== */
+body>header>menu>div>aside {
     width: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 11px;
     position: absolute;
     width: 60px;
     float: left;
-    top: 360px;
+    top: 470px;
     background-color: blue;
     background: none;
 }
 
-body>header>aside>ul {
+body>header>menu>div>aside>ul {
     list-style-type: none;
 }
 
-body>header>aside>ul>li>a {
+body>header>menu>div>aside>ul>li>a {
     color: white;
     width: 100%;
     padding: 10px 10px;
@@ -189,7 +229,7 @@ body>header>aside>ul>li>a {
     border-radius: 100%;
 }
 
-body>header>aside>ul>li>a:hover {
+body>header>menu>div>aside>ul>li>a:hover {
     color: #FCC419;
 }
 
@@ -620,7 +660,6 @@ body>header>aside>ul>li>a:hover {
 
 .myservices .rowService .colService .more-details {
     background: #101010;
-    /* border: 1.5px solid #4D4848; */
     border-radius: 10px;
     font-weight: bold;
     color: #ABB2B9;
@@ -763,13 +802,12 @@ footer {
 background: -webkit-linear-gradient(to right, #434343, #000000);  
 background: linear-gradient(to right, #434343, #000000);  */
 
-    background: #000000;
-    /* fallback for old browsers */
+    /* background: #000000;
+   
     background: -webkit-linear-gradient(to bottom, #434343, #000000);
-    /* Chrome 10-25, Safari 5.1-6 */
+   
     background: linear-gradient(to bottom, #434343, #000000);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+   */
 
     height: 50px;
     position: relative;
@@ -813,6 +851,33 @@ footer>h5 {
     padding-bottom: 10px;
 }
 
+/* scroal up  */
+.scrollup{
+    position:absolute;
+    right: 1rem;
+    /* bottom: -100%; */
+    bottom: -725%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#FCC419;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    transition: all 0.4s cubic-benzier(0.05, 0.2, 0.1, 1);;
+}
+.scrollup__icon{
+    color: black;
+    font-size: 2.25rem;
+    line-height: 1;
+}
+/* show scrollup */
+.show-scroll {
+    bottom: 3rem
+}
+
+
+
 /* =======================Assignment==================== */
 .work-list {
     height: 500px;
@@ -844,7 +909,6 @@ footer>h5 {
 .layer {
     width: 62%;
     height: 0;
-    /* background: linear-gradient(to top,#000000, #434343); */
     border-radius: 8px;
     position: absolute;
     left: 0;
@@ -859,12 +923,9 @@ footer>h5 {
     font-size: 13px;
     transition: height 0.5s;
     background: #bdc3c7;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.8;
+     opacity: 0.8;
 }
 
 .layer h3 {
@@ -904,7 +965,7 @@ footer>h5 {
 @media all and (max-width:1024px) {
 
     section {
-        height: 80vh;
+        height: 100vh;
 
     }
 
@@ -912,8 +973,13 @@ footer>h5 {
 
     body>header>menu .images {
         bottom: -20px;
-
+        width: 40%;
+        height: 60%;
     }
+    
+body>header>menu>div>aside {
+    top: 413px;
+}
 
     body>header>aside {
         top: 280px;
@@ -972,7 +1038,8 @@ footer>h5 {
     }
 
     .project-list {
-        height: 540px;
+        /* height: 540px; */
+        height: 500px;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
 
@@ -987,6 +1054,7 @@ footer>h5 {
 
         margin-left: 4rem;
     }
+
     .contactInfo .topic h2 {
         display: none;
     }
@@ -999,6 +1067,16 @@ footer>h5 {
 
     }
 
+    section {
+        height: 100vh;
+
+    }
+
+    /* .headlines {
+       font-size: 30px;
+       margin: 20px;
+    } */
+
     body>header>menu>nav>ul>li {
         margin: 10px 11px;
     }
@@ -1009,8 +1087,10 @@ footer>h5 {
     }
 
     body>header>menu .images {
-        width: 25%;
-        height: 75%;
+        /* width: 25%;
+        height: 75%; */
+        width: 30%;
+        height: 38%;
     }
 
     body>header>menu>div>h1 {
@@ -1038,7 +1118,7 @@ footer>h5 {
         margin-top: 20px;
         font-size: 18px;
     }
-    
+
 
     .aboutMe .row-about .col-about p {
         padding-top: 20px;
@@ -1061,14 +1141,14 @@ footer>h5 {
     .col-about .info i {
         margin: 18px;
         font-size: 29px;
-      
+
     }
 
     .col-about .info a {
 
         font-size: 9px;
     }
-   
+
 
     .col-about .interest i {
         padding-top: 20px;
@@ -1108,47 +1188,58 @@ footer>h5 {
         font-size: 14px;
         padding-top: 1.5rem;
     }
+
     .skillsTools .img-container .logo {
-         width: 35px;
+        width: 35px;
         height: 35px;
     }
+
     .work-list {
         height: 600px;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(2, 1fr);
-     
+
     }
+
     .mygallery {
         display: none;
     }
+
     .myservices .rowService {
         margin-top: 7rem;
     }
+
     .myservices .rowService .colService img {
         margin-left: 3.3rem;
         width: 80px;
         height: 80px;
     }
+
     .myservices .rowService .colService .more-details {
         margin-left: 2rem;
     }
+
     .myservices .rowService .colService h3 {
         font-size: 14px;
     }
+
     .contactInfo .topic h2 {
         display: none;
     }
+
     .contactInfo .rowContact .colInfo i {
         font-size: 38px;
-       margin-left: 0rem;
+        margin-left: 0rem;
     }
+
     .contactInfo .rowContact .colInfo a {
-   font-size: 32px;
-      padding-right: 2rem;
+        font-size: 32px;
+        padding-right: 2rem;
     }
+
     .social-icon-menu-footer {
-       gap: 5px;
-     width: 50px;
-       margin-left: 9px;
+        gap: 5px;
+        width: 50px;
+        margin-left: 9px;
     }
 }

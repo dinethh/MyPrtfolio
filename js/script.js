@@ -48,4 +48,22 @@ $(document).ready(function () {
         scrollContainer.scrollLeft -=1000;
     });
 
+
+    //scrool up
+           // =================== CHANGE BACKGROUND HEADER ==================================
+function scrollHeader(){
+    const header = document.getElementById('header');
+    //when the scroll is greater than 80 viewpoint height, add the scroll-header class to header tag
+    if(this.scrollY >= 80 ) header.classList.add('scroll-header');
+    else header.classList.remove('scroll-header');
+}
+window.addEventListener('scroll',scrollHeader);
+// =================== SHOW SCROLL UP ==================================
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    //when the scroll is greater than 350 viewpoint height, add the show-scroll class to scroll-top class
+    if(this.scrollY >= 350 ) scrollUp.classList.add('show-scroll');
+    else scrollUp.classList.remove('show-scroll');
+} 
+
 });
