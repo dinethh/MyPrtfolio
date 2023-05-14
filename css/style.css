@@ -11,7 +11,7 @@ section {
 
 body {
    height: 100vh;
-    background-image: url("/assets/images/bbg.jpg");
+    background-image: url("../assets/images/bbg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -61,7 +61,7 @@ body>header>menu {
     background-repeat: repeat;
     animation: snoww 2s linear infinite;
     background-attachment: fixed;
-    background: url(/assets/images/snow.png);
+    background: url("../assets/images/snow.png");
 
 }
 
