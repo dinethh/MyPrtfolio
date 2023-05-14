@@ -10,7 +10,7 @@ section {
 }
 
 body {
-   height: 100vh;
+    height: 100vh;
     background-image: url("../assets/images/bbg.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -158,6 +158,7 @@ body>header>menu>div>a {
     background-size: 200%;
     transition: .4s ease-out;
 }
+
 body>header>menu>div>a:hover {
     background-position: left;
 }
@@ -174,7 +175,8 @@ body>header>menu .images {
     border-bottom-right-radius: 100%; */
     /* background-color: gold; */
 }
-.sss{
+
+.sss {
     width: 200px;
     height: 200px;
     background-color: blue;
@@ -234,198 +236,6 @@ body>header>menu>div>aside>ul>li>a:hover {
 }
 
 /* end navigation */
-
-/* ================================skills and tools=================================== */
-
-.skillsTools .box-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-    padding-left: 3rem;
-}
-
-.skillsTools .box-container .box {
-    position: relative;
-}
-
-.skillsTools .box-container .box span {
-    font-size: 1.5rem;
-    background: #222;
-    color: #fff;
-    border-radius: 5rem;
-    padding: .5rem 2.5rem;
-}
-
-.skillsTools .box-container .box h3 {
-    font-size: 1.1rem;
-    color: #fff;
-    padding-top: 1.5rem;
-}
-
-.skillsTools .box-container .box h3:hover {
-    transform: scale(1.1);
-}
-
-.skillsTools .box-container .box i {
-    position: absolute;
-    top: -0.5rem;
-    left: -1.7rem;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    line-height: 3rem;
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-    background: #fff724;
-}
-
-.skillsTools .box-container .box {
-    margin: 2rem 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-left: 0.2rem solid #fff;
-    position: relative;
-    border-style: dotted;
-
-}
-
-.skillsTools .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skillsTools .img-container .logo {
-    border-radius: 1rem;
-    margin: 1.5rem;
-    overflow: hidden;
-    cursor: pointer;
-    width: 70px;
-    height: 70px;
-}
-
-.skillsTools .img-container .logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.skillsTools .img-container .logo:hover img {
-    transform: scale(1.2);
-}
-
-
-/* ================================My Projects=================================== */
-
-/* start project list  */
-.project-list {
-    height: 380px;
-    display: grid;
-    margin: 40px;
-    gap: 40px;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
-
-}
-
-.proj {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.proj img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-    opacity: 0.9;
-    object-fit: cover;
-}
-
-.layers {
-    width: 80%;
-    height: 0;
-    /* background: linear-gradient(to top,#000000, #434343); */
-    border-radius: 8px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 13px;
-    transition: height 0.5s;
-    background: #bdc3c7;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    opacity: 0.8;
-}
-
-.layers h3 {
-    font-weight: 500;
-    color: whitesmoke;
-    margin-bottom: 25px;
-}
-
-.layers p {
-    padding-bottom: 25px;
-    color: rgb(163, 157, 157);
-    text-align: center;
-}
-
-.layers a {
-    margin: top 20px;
-    color: #FCC419;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 60px;
-    background: linear-gradient(to top, #434343, #000000);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-
-}
-
-.proj:hover img {
-    transform: scale(1.1);
-}
-
-.proj:hover .layers {
-    height: 100%;
-
-
-}
-
-/* click-Here */
-.myProject .click-Here h5 {
-    color: #fff;
-
-}
-
-.myProject .click-Here {
-    padding-left: 48%;
-    /* padding-top: 2.5rem; */
-
-}
-
-.myProject .click-Here img:hover {
-    transform: scale(1.1);
-}
 
 /* ============ About Me ============== */
 .aboutMe .row-about {
@@ -551,6 +361,281 @@ body>header>menu>div>aside>ul>li>a:hover {
 .col-about .ic li:hover {
     transform: scale(1.1);
 }
+
+
+
+/* ================================My Projects=================================== */
+
+/* start project list  */
+.project-list {
+    height: 380px;
+    display: grid;
+    margin: 40px;
+    gap: 40px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+
+}
+
+.proj {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.proj img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    opacity: 0.9;
+    object-fit: cover;
+}
+
+.layers {
+    width: 80%;
+    height: 0;
+    /* background: linear-gradient(to top,#000000, #434343); */
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 13px;
+    transition: height 0.5s;
+    background: #bdc3c7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.8;
+}
+
+.layers h3 {
+    font-weight: bold;
+    color: #FCC419;
+    margin-bottom: 25px;
+}
+
+.layers p {
+    padding-bottom: 25px;
+    color: white;
+    text-align: center;
+}
+
+.layers a {
+    margin: top 20px;
+    color: #FCC419;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: linear-gradient(to top, #434343, #000000);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.proj:hover img {
+    transform: scale(1.1);
+}
+
+.proj:hover .layers {
+    height: 100%;
+
+
+}
+
+/* click-Here */
+.myProject .click-Here h5 {
+    color: #fff;
+
+}
+
+.myProject .click-Here {
+    padding-left: 48%;
+    /* padding-top: 2.5rem; */
+
+}
+
+.myProject .click-Here img:hover {
+    transform: scale(1.1);
+}
+
+
+/* =======================Assignment==================== */
+.work-list {
+    height: 500px;
+    display: grid;
+    margin: 40px;
+    gap: 30px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    overflow: hidden;
+
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    opacity: 0.9;
+    object-fit: cover;
+}
+
+.layer {
+    width: 62%;
+    height: 0;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 13px;
+    transition: height 0.5s;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+    opacity: 0.8;
+}
+
+.layer h3 {
+    font-weight: bold;
+    color: #FCC419;
+    margin-bottom: 60px;
+}
+
+.layer a {
+    margin: top 20px;
+    color: #FCC419;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: linear-gradient(to top, #434343, #000000);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+
+}
+
+/* ================================skills and tools=================================== */
+
+.skillsTools .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.skillsTools .box-container .box {
+    position: relative;
+}
+
+.skillsTools .box-container .box span {
+    font-size: 1.5rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.skillsTools .box-container .box h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    padding-top: 1.5rem;
+}
+
+.skillsTools .box-container .box h3:hover {
+    transform: scale(1.1);
+}
+
+.skillsTools .box-container .box i {
+    position: absolute;
+    top: -0.5rem;
+    left: -1.7rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    background: #fff724;
+}
+
+.skillsTools .box-container .box {
+    margin: 2rem 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 0.2rem solid #fff;
+    position: relative;
+    border-style: dotted;
+
+}
+
+.skillsTools .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skillsTools .img-container .logo {
+    border-radius: 1rem;
+    margin: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+}
+
+.skillsTools .img-container .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.skillsTools .img-container .logo:hover img {
+    transform: scale(1.2);
+}
+
+
 
 /* ============== gallery =============== */
 .mygallery {
@@ -852,110 +937,34 @@ footer>h5 {
 }
 
 /* scroal up  */
-.scrollup{
-    position:absolute;
+.scrollup {
+    position: absolute;
     right: 1rem;
     /* bottom: -100%; */
     bottom: -725%;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color:#FCC419;
+    background-color: #FCC419;
     display: grid;
     place-items: center;
     z-index: 100;
-    transition: all 0.4s cubic-benzier(0.05, 0.2, 0.1, 1);;
+    transition: all 0.4s cubic-benzier(0.05, 0.2, 0.1, 1);
+    ;
 }
-.scrollup__icon{
+
+.scrollup__icon {
     color: black;
     font-size: 2.25rem;
     line-height: 1;
 }
+
 /* show scrollup */
 .show-scroll {
     bottom: 3rem
 }
 
 
-
-/* =======================Assignment==================== */
-.work-list {
-    height: 500px;
-    display: grid;
-    margin: 40px;
-    gap: 30px;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    overflow: hidden;
-
-}
-
-.work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-    opacity: 0.9;
-    object-fit: cover;
-}
-
-.layer {
-    width: 62%;
-    height: 0;
-    border-radius: 8px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 13px;
-    transition: height 0.5s;
-    background: #bdc3c7;
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-     opacity: 0.8;
-}
-
-.layer h3 {
-    font-weight: 500;
-    color: whitesmoke;
-    margin-bottom: 60px;
-}
-
-.layer a {
-    margin: top 20px;
-    color: #FCC419;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 60px;
-    background: linear-gradient(to top, #434343, #000000);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-.work:hover .layer {
-    height: 100%;
-
-}
 
 
 
@@ -976,10 +985,10 @@ footer>h5 {
         width: 40%;
         height: 60%;
     }
-    
-body>header>menu>div>aside {
-    top: 413px;
-}
+
+    body>header>menu>div>aside {
+        top: 413px;
+    }
 
     body>header>aside {
         top: 280px;
@@ -1241,5 +1250,9 @@ body>header>menu>div>aside {
         gap: 5px;
         width: 50px;
         margin-left: 9px;
+    }
+
+    .scrollup {
+        bottom: -620%;
     }
 }
