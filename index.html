@@ -24,7 +24,7 @@
     <link rel="icon" href="assets/images/met.png">
     <!-- jquery global link -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-     <!-- my local scripts -->
+    <!-- my local scripts -->
     <script src="/js/script.js"></script>
 
 
@@ -33,9 +33,9 @@
 <body>
     <!-- start hedder -->
     <header id="home">
-       <menu>
-         <nav>
-               <!-- <h4>Photofolio</h4> -->
+        <menu>
+            <nav>
+                <!-- <h4>Photofolio</h4> -->
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
@@ -52,11 +52,11 @@
                 <h1>I'm Dineth <span>Panditha</span></h1>
                 <p>
                     Hey...I'm Fullstack Developer
-                     This is my Official Portfolio Web Site <br>
-                     to show all Details 
-                     About My Software Development 
+                    This is my Official Portfolio Web Site <br>
+                    to show all Details
+                    About My Software Development
                 </p>
-                <aside> 
+                <aside>
                     <ul>
                         <li><a href=""><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
@@ -72,13 +72,13 @@
                     <ul>
                         <li><a href=""><i class="fa fa-instagram"></i></a></li>
                     </ul>
-                </aside> 
+                </aside>
                 <a href="">Hire Me</a>
             </div>
             <div class="images">
                 <img src="assets/images/Yelloback.png" class="shape">
                 <img src="assets/images/MeeN.png" class="me">
-              </div>
+            </div>
         </menu>
     </header>
     <!-- End hedder -->
@@ -390,7 +390,8 @@
                     <img src="assets/images/trans4.gif">
                     <div class="layer">
                         <h3>Case-6</h3>
-                        <a href="Assignment\css-Assignment\Transitions\case-4\index.html"><i class="fa fa-external-link"></i></a>
+                        <a href="Assignment\css-Assignment\Transitions\case-4\index.html"><i
+                                class="fa fa-external-link"></i></a>
                     </div>
                 </div>
 
@@ -398,7 +399,8 @@
                     <img src="assets/images/trans-2.gif">
                     <div class="layer">
                         <h3>Case-7</h3>
-                        <a href="Assignment\css-Assignment\Transitions\case-2\index.html"><i class="fa fa-external-link"></i></a>
+                        <a href="Assignment\css-Assignment\Transitions\case-2\index.html"><i
+                                class="fa fa-external-link"></i></a>
                     </div>
                 </div>
 
@@ -406,7 +408,8 @@
                     <img src="assets/images/trans-3-1.gif">
                     <div class="layer">
                         <h3>Case-8</h3>
-                        <a href="Assignment\css-Assignment\Transitions\case-3\index.html"><i class="fa fa-external-link"></i></a>
+                        <a href="Assignment\css-Assignment\Transitions\case-3\index.html"><i
+                                class="fa fa-external-link"></i></a>
                     </div>
                 </div>
 
@@ -414,7 +417,8 @@
                     <img src="assets/images/trans-5.gif">
                     <div class="layer">
                         <h3>Case-9</h3>
-                        <a href="Assignment\css-Assignment\Transitions\case-5\index.html"><i class="fa fa-external-link"></i></a>
+                        <a href="Assignment\css-Assignment\Transitions\case-5\index.html"><i
+                                class="fa fa-external-link"></i></a>
                     </div>
                 </div>
 
@@ -422,7 +426,8 @@
                     <img src="assets/images/trans-6.gif">
                     <div class="layer">
                         <h3>Case-10</h3>
-                        <a href="Assignment\css-Assignment\Transitions\case-6\index.html"><i class="fa fa-external-link"></i></a>
+                        <a href="Assignment\css-Assignment\Transitions\case-6\index.html"><i
+                                class="fa fa-external-link"></i></a>
                     </div>
                 </div>
             </div>
@@ -514,14 +519,14 @@
 
                 </div>
             </div> <!-- end rowContact -->
-         </section>
+        </section>
         <!-- End contact -->
     </main>
     <!--end main -->
 
 
     <footer>
-       
+
         <aside class="social-icon-menu-footer">
             <!-- linkdin -->
             <ul>
@@ -550,6 +555,35 @@
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-angle-up scrollup__icon"></i>
     </a>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //scrool up
+        // =================== CHANGE BACKGROUND HEADER ==================================
+        function scrollHeader() {
+            const header = document.getElementById('header');
+            //when the scroll is greater than 80 viewpoint height, add the scroll-header class to header tag
+            if (this.scrollY >= 80) header.classList.add('scroll-header');
+            else header.classList.remove('scroll-header');
+        }
+        window.addEventListener('scroll', scrollHeader);
+        // =================== SHOW SCROLL UP ==================================
+        function scrollUp() {
+            const scrollUp = document.getElementById('scroll-up');
+            //when the scroll is greater than 350 viewpoint height, add the show-scroll class to scroll-top class
+            if (this.scrollY >= 350) scrollUp.classList.add('show-scroll');
+            else scrollUp.classList.remove('show-scroll');
+        } 
+    </script>
 </body>
 
 </html>
