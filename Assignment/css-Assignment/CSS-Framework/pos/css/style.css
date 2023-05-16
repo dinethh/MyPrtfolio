@@ -1,0 +1,35 @@
+ section {
+   height: 100vh;
+   width: 100%;
+   overflow-x: hidden;
+ }
+
+ .container {
+   padding-top: 120px;
+
+
+ }
+
+ .col {
+   height: 280px;
+   width: 200px;
+   background-color: whitesmoke;
+   margin: 50px;
+   border-radius: 30px;
+ }
+
+ .col img {
+   margin: 30px;
+   height: 120px;
+   width: 120px;
+ }
+
+ .col img:hover {
+   transform: scale(1.2);
+ }
+
+ /* customer form */
+ .col-10 {
+
+   margin: 55px;
+ }

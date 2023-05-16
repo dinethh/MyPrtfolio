@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assects/css/bootstrap.min.css">
+  <title>FoodCity</title>
+</head>
+
+<body>
+  <section id="home">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+      <div class="container-fluid" style="background-color: #85C1E9; height: 70px;">
+        <a class="navbar-brand" href="#">
+          <img src="assects/images/logohead.png" alt="Logo" width="130" height="30" style="margin: 20px;"
+            class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #85C1E9;">
+          <ul class="navbar-nav"
+            style="font-family:Trebuchet MS, Helvetica, sans-serif; font-weight:bold;margin: 10px;">
+            <li class="nav-item" style="background-color: #85C1E9; ">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer.html">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="item.html">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="order.html">Orders</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- INvoice Details -->
+
+    <div class="container text-center" style="margin-top: 30px; background-color: aliceblue;">
+      <div class="row">
+        <div class="col" style="height: 330px; margin-right: 30px;">
+          <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
+          <!-- code here -->
+
+          <div class="container text-center" style="margin-top: 30px;">
+            <div class="row">
+              <div class="col">
+                Order ID:
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="col">
+                Date :
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Cus ID :
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">C001</option>
+                  <option value="2">C002</option>
+                  <option value="3">C003</option>
+                </select>
+              </div>
+              <div class="col">
+                Cus Name:
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col">
+                    Salary :
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                  <div class="col">
+                    Address :
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- item Select -->
+
+        <div class="col" style="height: 330px; margin-right: 30px;">
+          <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
+          <!-- code here -->
+          <div class="container text-center" style="margin-top: 30px;">
+            <div class="row">
+              <div class="col">
+                Item Code :
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Itm001</option>
+                  <option value="2">Itm002</option>
+                  <option value="3">Itm003</option>
+                </select>
+              </div>
+              <div class="col">
+                Item Name :
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Soap</option>
+                  <option value="2">KeeriSamba</option>
+                  <option value="3">Sampoo</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Price :
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+              </div>
+              <div class="col">
+                QtyOnHand :
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                OrderQTY :
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+              </div>
+              <div class="col">
+                <button type="button" class="btn btn-danger" style="margin-top: 70px;">Add Item</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- total part -->
+
+        <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #85C1E9;">
+          <!-- code here -->
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col" style="color: blue;font-size: 30px;">
+                Total
+                <label for="exampleFormControlInput1" class="form-label"
+                  style="font-size: 40px;color: red;">1000.00</label>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Cash :
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                Balance :
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <button type="button" class="btn btn-primary" style="margin-top: 30px;">Purchase</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+        <div class="col-10">
+
+          <div class="customeTableDiv">
+            <table class="table bg-light table-bordered w-100 h-100 table-hover">
+              <thead class="bg-success text-light text-center">
+                <tr>
+                  <th>Item Code</th>
+                  <th>Item Name</th>
+                  <th>Price</th>
+                  <th>Quentity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="customerTable">
+                <tr>
+                  <td>Itm002</td>
+                  <td>Soap</td>
+                  <td>290.00</td>
+                  <td>2</td>
+                  <td>580.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+  </section>
+  <!-- end home section -->
+  <script src="assects/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodCity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assects/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section id="customer">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+            <div class="container-fluid" style="background-color: #85C1E9; height: 70px;">
+                <a class="navbar-brand" href="#">
+                    <img src="assects/images/logohead.png" alt="Logo" width="130" height="30" style="margin: 20px;"
+                        class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #85C1E9;">
+                    <ul class="navbar-nav"
+                        style="font-family:Trebuchet MS, Helvetica, sans-serif; font-weight:bold;margin: 10px;">
+                        <li class="nav-item" style="background-color: #85C1E9; ">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="customer.html">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="item.html">Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order.html">Orders</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="row justify-content-around" style="height: max-content; padding-top: 40px;">
+            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
+                <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
+                <form>
+                    <div class="mb-3 ms-3 me-3">
+                        <input class="form-control" id="itemId" placeholder="Input Item ID" type="text">
+                    </div>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                    <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
+                    <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+
+                </form>
+            </div>
+
+            <!-- buttons -->
+            <div class="col-10 col-md-5 col-lg-5 mt-2">
+                <button class="btn btn-primary position-relative m-2" data-bs-target="#registerItem"
+                    data-bs-toggle="modal" id="btnRegister">Add Item
+                </button>
+                <!-- <button class="btn btn-success position-relative m-2" data-bs-target="#updateItem"
+                    data-bs-toggle="modal">Update Item
+                </button> -->
+
+            </div>
+        </div>
+
+        <!-- =============================AddItem============================== -->
+
+
+        <div class="col-10 col-md-5 col-lg-5">
+            <!-- Modal -->
+            <div class="modal fade" id="registerItem" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="background-color: azure">
+                        <div class="modal-header" style="background-color:#85C1E9">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New
+                                Customer</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="customerID" class="form-label">Item Code:</label>
+                                    <input type="text" class="form-control" id="exampleInputID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerName" class="form-label"> Item Name:</label>
+                                    <input type="text" class="form-control" id="exampleInputName:">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerAddress" class="form-label">Unit Price:</label>
+                                    <input type="text" class="form-control" id="exampleInputAddress:">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerSalary" class="form-label">Quentity:</label>
+                                    <input type="number" class="form-control" id="exampleInputSalary:">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger">Save</button>
+                            <button type="button" class="btn btn-warning">Renew</button>
+                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- =========================================================== -->
+
+        <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+            <div class="col-10">
+
+                <div class="itemTableDiv">
+                    <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                        <thead class="bg-success text-light text-center">
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemTable">
+                            <tr>
+                                <td>Itm001</td>
+                                <td>Samba</td>
+                                <td>130.00</td>
+                                <td>4</td>
+                            </tr>
+
+                            <tr>
+                                <td>Itm002</td>
+                                <td>Soap</td>
+                                <td>290.00</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr>
+                                <td>Itm003</td>
+                                <td>Fish</td>
+                                <td>400.00</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <script src="assects/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
