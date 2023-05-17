@@ -1335,7 +1335,7 @@ footer>h5 {
 
 /* ====================================== */
 
-@media all and (min-width:425px) and (max-width:767px) {
+@media all and (max-width:767px) {
 
 
     .mygallery {
@@ -1448,7 +1448,7 @@ footer>h5 {
 }
 
 
-@media  all and (min-width:375px) and (max-width:424px) {
+@media  all and (max-width:424px) {
     .mygallery {
         display: none;
     }
@@ -1637,3 +1637,5 @@ footer>h5 {
         font-size: 15px;
     }
 }
+
+/* ============================================== */
