@@ -1335,7 +1335,7 @@ footer>h5 {
 
 /* ====================================== */
 
-@media (min-width:425px) and (max-width:767px) {
+@media all and (min-width:425px) and (max-width:767px) {
 
 
     .mygallery {
@@ -1448,7 +1448,7 @@ footer>h5 {
 }
 
 
-@media (min-width:375px) and (max-width:424px) {
+@media  all and (min-width:375px) and (max-width:424px) {
     .mygallery {
         display: none;
     }
@@ -1541,4 +1541,99 @@ footer>h5 {
         font-size: 15px;
     }
     
+
+}
+
+@media  all and (max-width:384px) {
+    .mygallery {
+        display: none;
+    }
+   
+    .headlines {
+        font-size: 30px;
+        margin: 20px;
+    }
+    body>header>menu>div>h1 {
+        font-size: 30px;
+    }
+    body>header>menu>div>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    body>header>menu>div>a {
+        margin: 15px 0;
+
+    }
+
+    body>header>menu .images {
+        width: 30%;
+        height: 40%;
+    }
+
+    body>header>menu>div>aside {
+        flex-direction: column;
+    }
+    .aboutMe .row-about .col-about {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .aboutMe .row-about .col-about p {
+        font-size: 17px;
+    }
+    .aboutMe .cv {
+        margin-top: 60px;
+        margin-left: 75px;
+    }
+    .col-about .info a {
+        font-size: 16px;
+    }
+    .col-about .interest i {
+        padding-top: 20px;
+        font-size: 30px;
+        margin: 17px;
+    }
+    .col-about li {
+        font-size: 14px;
+    }
+    .skillsTools .box-container {
+        padding-left: 0rem;
+    }
+    .project-list {
+        height: 1000px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .work-list {
+        height: auto;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .myProject .click-Here {
+        padding-left: 44%;
+    }
+    .myservices .rowService {
+        flex-direction: column;
+        align-items: center;
+    }
+    .myservices .rowService .colService {
+        width: 70%;
+    }
+    .myservices .rowService .colService img {
+        margin-top: 3rem;
+        margin-left: 6rem;
+    }
+    .myservices .rowService .colService .more-details {
+        margin-left: 4rem;
+    }
+    .contactInfo .rowContact {
+        flex-direction: column;
+    }
+    .contactInfo .rowContact .colInfo {
+        width: 18rem;
+    }
+    .contactInfo .rowContact .colInfo li {
+        font-size: 15px;
+    }
 }
