@@ -96,31 +96,102 @@ body>header>menu {
 
 }
 
-body>header>menu>nav {
-    display: flex;
-    width: max-content;
-    margin: auto;
-    padding: 10px 0;
-    align-items: center;
-    justify-content: space-between;
-}
-
-body>header>menu>nav>ul>li {
-    display: inline-block;
+/* navigation bar */
+.nav-item {
     list-style: none;
-    margin: 10px 20px;
-
 }
 
-body>header>menu>nav>ul>li>a {
+a {
+    color: aliceblue;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+
 }
 
-body>header>menu>nav>ul>li>a:hover {
-    color: #FCC419;
+.nav-bar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
 
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.brand {
+    width: 100px;
+    height: 40px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.nav-link:hover {
+    color: #FCC419;
+}
+
+.hamber {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+
+}
+
+@media all and (max-width:768px) {
+    .hamber {
+        display: block;
+        z-index: 100;
+    }
+
+    .hamber.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamber.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamber.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 7px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        opacity: 0.8;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 100;
+
+    }
+
+    .nav-item {
+        margin: 16px 0;
+
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
 }
 
 
@@ -176,12 +247,6 @@ body>header>menu .images {
     /* background-color: gold; */
 }
 
-.sss {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-}
-
 body>header>menu .images>img {
     height: 100%;
     position: absolute;
@@ -213,7 +278,7 @@ body>header>menu>div>aside {
     position: absolute;
     width: 60px;
     float: left;
-    top: 470px;
+    top: 480px;
     background-color: blue;
     background: none;
 }
@@ -974,11 +1039,9 @@ footer>h5 {
 @media all and (max-width:1024px) {
 
     section {
-        height: 100vh;
+        height: auto;
 
     }
-
-    body>header>menu>nav {}
 
     body>header>menu .images {
         bottom: -20px;
@@ -987,7 +1050,7 @@ footer>h5 {
     }
 
     body>header>menu>div>aside {
-        top: 413px;
+        top: 425px;
     }
 
     body>header>aside {
@@ -1047,7 +1110,6 @@ footer>h5 {
     }
 
     .project-list {
-        /* height: 540px; */
         height: 500px;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
@@ -1069,37 +1131,27 @@ footer>h5 {
     }
 }
 
+/* ================================================= */
 
 @media all and (max-width:768px) {
-    body>header>menu>nav {
-        width: 100%;
-
-    }
-
     section {
-        height: 100vh;
+        height: auto;
 
     }
 
-    /* .headlines {
-       font-size: 30px;
-       margin: 20px;
-    } */
-
-    body>header>menu>nav>ul>li {
-        margin: 10px 11px;
+    .headlines {
+        font-size: 40px;
+        margin: 20px;
     }
 
-    body>header>menu>div {
+ body>header>menu>div {
         margin-left: 7%;
         margin-top: 30%;
     }
 
     body>header>menu .images {
-        /* width: 25%;
-        height: 75%; */
-        width: 30%;
-        height: 38%;
+        width: 23%;
+        height: 60%;
     }
 
     body>header>menu>div>h1 {
@@ -1113,7 +1165,7 @@ footer>h5 {
     }
 
     body>header>menu>div>a {
-        margin: 20px 0;
+        margin: 80px 0;
 
     }
 
@@ -1122,53 +1174,77 @@ footer>h5 {
         width: 45px;
     }
 
+    .aboutMe .row-about {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .aboutMe .row-about .col-about {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
     .aboutMe .row-about .col-about h2 {
         padding: 6px;
         margin-top: 20px;
-        font-size: 18px;
+        margin-bottom: 20px;
+        font-size: 25px;
     }
 
 
     .aboutMe .row-about .col-about p {
         padding-top: 20px;
         padding: 5px;
-        font-weight: 10;
+        font-size: 20px;
+
     }
 
     .aboutMe .downloard-CV {
         width: 150px;
-        height: 35px;
+        height: 50px;
         font-size: 12px;
     }
 
     .aboutMe .cv {
 
-        margin-top: 15px;
-        /* margin-left: 0px; */
+        margin-top: 90px;
+        margin-left: 100px;
     }
 
     .col-about .info i {
-        margin: 18px;
-        font-size: 29px;
+        margin: 15px;
+        font-size: 35px;
 
     }
 
     .col-about .info a {
 
-        font-size: 9px;
+        font-size: 20px;
     }
 
+    .col-about .interest h5 {
+        font-size: 20px;
+    }
 
     .col-about .interest i {
         padding-top: 20px;
-        font-size: 23px;
-        margin: 10px;
+        font-size: 35px;
+        margin: 24px;
     }
 
+
     .col-about img {
-        width: 35px;
-        margin-left: 7px;
-        margin-top: 27px;
+        width: 45px;
+        margin-left: 12px;
+        margin-right: 10px;
+        margin-top: 14px;
+
+    }
+
+    .col-about li {
+        font-size: 20px;
+
     }
 
     .skillsTools .box-container {
@@ -1178,18 +1254,19 @@ footer>h5 {
 
     .skillsTools .box-container .box {
         margin: 11px 45px;
-        padding-left: 0rem;
+        padding-left: 3rem;
         padding-right: 3rem;
-        border-left: 0.2rem solid black;
-
+        margin-bottom: 3rem;
+        border-left: 0.2rem solid white;
+        border-style: dotted;
     }
 
     .skillsTools .box-container .box i {
-        left: -3.7rem;
+        left: -1.7rem;
     }
 
     .skillsTools .box-container .box span {
-        font-size: 15px;
+        font-size: 16px;
         padding: 0.5rem 2.5rem;
     }
 
@@ -1199,8 +1276,8 @@ footer>h5 {
     }
 
     .skillsTools .img-container .logo {
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
     }
 
     .work-list {
@@ -1210,40 +1287,40 @@ footer>h5 {
 
     }
 
-    .mygallery {
-        display: none;
+    .myservices .rowService {
+        margin-top: 4rem;
     }
 
-    .myservices .rowService {
-        margin-top: 7rem;
+    .myservices .rowService .colService {
+        height: 250px;
     }
 
     .myservices .rowService .colService img {
-        margin-left: 3.3rem;
-        width: 80px;
-        height: 80px;
+        margin-left: 3.2rem;
+        margin-top: 2rem;
+        width: 60px;
+        height: 60px;
     }
 
     .myservices .rowService .colService .more-details {
-        margin-left: 2rem;
+        margin-left: 1.5rem;
     }
 
     .myservices .rowService .colService h3 {
         font-size: 14px;
     }
 
-    .contactInfo .topic h2 {
-        display: none;
-    }
-
     .contactInfo .rowContact .colInfo i {
-        font-size: 38px;
+        font-size: 40px;
         margin-left: 0rem;
     }
 
     .contactInfo .rowContact .colInfo a {
-        font-size: 32px;
-        padding-right: 2rem;
+        font-size: 30px;
+    }
+
+    .contactInfo .rowContact .colInfo li {
+        font-size: 16px;
     }
 
     .social-icon-menu-footer {
@@ -1253,6 +1330,9 @@ footer>h5 {
     }
 
     .scrollup {
-        bottom: -620%;
+        display: none;
     }
 }
+
+/* ====================================== */
+

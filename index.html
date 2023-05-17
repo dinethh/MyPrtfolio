@@ -34,18 +34,26 @@
     <!-- start hedder -->
     <header id="home">
         <menu>
-            <nav>
-                <!-- <h4>Photofolio</h4> -->
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#skills&Tools">Skills & Tools</a></li>
-                    <li><a href="#myprojects">Projects</a></li>
-                    <li><a href="#assignment">Assignment</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contactMe">Contact Me</a></li>
-                </ul>
+            <nav class="nav-bar">
+                <img src="assets/images/logo.png" alt="" class="brand">
+               <ul class="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#aboutme" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#skills&Tools" class="nav-link">Skills & Tools</a></li>
+                <li class="nav-item"><a href="#myprojects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#assignment" class="nav-link">Assignment</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contactMe" class="nav-link">Contact Me</a></li>
+               </ul>
+        
+        <div class="hamber">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
             </nav>
 
             <div>
@@ -111,7 +119,7 @@
                 <div class="col-about">
                     <h2>Personal Info</h2>
                     <nav class="info">
-                        <li><i class="fa fa-birthday-cake"></i>1998.08.14</li>
+                        <li><i class="fa fa-birthday-cake"></i><a href="">1998.08.14</a></li>
                         <li><i class="fa fa-envelope"></i><a
                                 href="mailto:dinethpanditha9@gmail.com">dinethpanditha9@gmail.com</a></li>
                         <li><i class="fa fa-phone"></i><a href="tel:+94772427603">&nbsp;+94772427603</a></li>
@@ -583,7 +591,21 @@
             if (this.scrollY >= 350) scrollUp.classList.add('show-scroll');
             else scrollUp.classList.remove('show-scroll');
         } 
+
+        // hamber
     </script>
+      <script>
+        const hamber =document.querySelector(".hamber");
+        const navMenu =document.querySelector(".navMenu");
+         hamber.addEventListener("click", () =>{
+            hamber.classList.toggle("active");
+            navMenu.classList.toggle("active");
+         })
+         document.querySelector(".nav-link").forEach(n => n.addEventListener("click",() =>{
+            hamber.classList.remove("active");
+            navMenu.classList.remove("active");
+         }));
+     </script>
 </body>
 
 </html>
