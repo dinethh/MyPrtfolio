@@ -15,57 +15,62 @@
 <body>
 
     <header>
-         <!-- navigation -->
-     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
-        <div class="container-fluid" style="background-color: #85C1E9;">
-          <a class="navbar-brand" href="#">
-            <img src="assects/images/logohead.png" alt="Logo" width="120" height="40"
-            class="d-inline-block align-text-top">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
-          style="height: 35px; border: none;";>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home" id="homeform">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#customer" id="customerform">Customer</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#item" id="itemform">Item</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Orders
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+            <div class="container-fluid" style="background-color: #85C1E9;">
+                <a class="navbar-brand" href="#">
+                    <img src="assects/images/logohead.png" alt="Logo" width="120" height="40"
+                        class="d-inline-block align-text-top">
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#order" id="orderform">Order</a></li>
-                  <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
-               </ul>
-              </li>
-              </ul>
-           </div>
-        </div>
-      </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" style="height: 35px; border: none;" ;>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home" id="homeform">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#customer" id="customerform">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#item" id="itemform">Item</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Orders
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#order" id="orderform">Order</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- home section -->
     <section id="home">
         <div class="container text-center" style="padding-top: 120px;">
             <div class="row">
-                <div class="col" style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                <div class="col"
+                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
                     <img src="assects/images/user.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
                     <h2>000</h2>
                 </div>
-                <div class="col"style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
-                    <img src="assects/images/item.png" alt="..."style="height: 120px;margin: 30px;width: 120px;">
+                <div class="col"
+                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                    <img src="assects/images/item.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
                     <h2>000</h2>
                 </div>
-                <div class="col" style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
-                    <img src="assects/images/order.png" alt="..."style="height: 120px;margin: 30px;width: 120px;">
+                <div class="col"
+                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                    <img src="assects/images/order.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
                     <h2>000</h2>
                 </div>
             </div>
@@ -503,37 +508,43 @@
                     </div>
                 </div>
             </div>
-</section>
+    </section>
 
     <script src="assects/bootsrap/js/bootstrap.bundle.min.js"></script>
     <script>
-        
-    document.getElementById("homeform").addEventListener("click", function () {
-        document.getElementById("home").style.display = 'inline-block';
-        document.getElementById("customer").style.display = 'none';
-        document.getElementById("item").style.display = 'none';
-        document.getElementById("order").style.display = 'none';
-    });
-    
-    document.getElementById("customerform").addEventListener("click", function () {
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("customer").style.display = 'inline-block';
-        document.getElementById("item").style.display = 'none';
-        document.getElementById("order").style.display = 'none';
-    });
-    document.getElementById("itemform").addEventListener("click", function () {
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("customer").style.display = 'none';
-        document.getElementById("item").style.display = 'inline-block';
-        document.getElementById("order").style.display = 'none';
-    });
-    document.getElementById("orderform").addEventListener("click", function () {
-        document.getElementById("home").style.display = 'none';
-        document.getElementById("customer").style.display = 'none';
-        document.getElementById("item").style.display = 'none';
-        document.getElementById("order").style.display = 'inline-block';
-    }); 
-  
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("home").style.display = 'inline-block';
+            document.getElementById("customer").style.display = 'none';
+            document.getElementById("item").style.display = 'none';
+            document.getElementById("order").style.display = 'none';
+        });
+        document.getElementById("homeform").addEventListener("click", function () {
+            document.getElementById("home").style.display = 'inline-block';
+            document.getElementById("customer").style.display = 'none';
+            document.getElementById("item").style.display = 'none';
+            document.getElementById("order").style.display = 'none';
+        });
+
+        document.getElementById("customerform").addEventListener("click", function () {
+            document.getElementById("home").style.display = 'none';
+            document.getElementById("customer").style.display = 'inline-block';
+            document.getElementById("item").style.display = 'none';
+            document.getElementById("order").style.display = 'none';
+        });
+        document.getElementById("itemform").addEventListener("click", function () {
+            document.getElementById("home").style.display = 'none';
+            document.getElementById("customer").style.display = 'none';
+            document.getElementById("item").style.display = 'inline-block';
+            document.getElementById("order").style.display = 'none';
+        });
+        document.getElementById("orderform").addEventListener("click", function () {
+            document.getElementById("home").style.display = 'none';
+            document.getElementById("customer").style.display = 'none';
+            document.getElementById("item").style.display = 'none';
+            document.getElementById("order").style.display = 'inline-block';
+        });
+
     </script>
 </body>
 
