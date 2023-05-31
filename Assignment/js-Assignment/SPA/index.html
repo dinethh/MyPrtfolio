@@ -128,24 +128,24 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="customerID" class="form-label">Customer ID:</label>
-                                    <input type="text" class="form-control" id="exampleInputID">
+                                    <input type="text" class="form-control" id="cusID">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label">Customer Name:</label>
-                                    <input type="text" class="form-control" id="exampleInputName:">
+                                    <input type="text" class="form-control" id="cusName">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerAddress" class="form-label">Customer Address:</label>
-                                    <input type="text" class="form-control" id="exampleInputAddress:">
+                                    <input type="text" class="form-control" id="cusAddress">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerSalary" class="form-label">Customer Salary:</label>
-                                    <input type="number" class="form-control" id="exampleInputSalary:">
+                                    <input type="number" class="form-control" id="salary">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Save</button>
+                            <button type="button" class="btn btn-danger" id="save">Save</button>
                             <button type="button" class="btn btn-warning">Renew</button>
                             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
                         </div>
@@ -169,27 +169,9 @@
                                 <th>Salary</th>
                             </tr>
                         </thead>
-                        <tbody id="customerTable">
-                            <tr>
-                                <td>C001</td>
-                                <td>Dineth</td>
-                                <td>Hikkaduwa</td>
-                                <td>100000</td>
-                            </tr>
 
-                            <tr>
-                                <td>C002</td>
-                                <td>Savi</td>
-                                <td>Matara</td>
-                                <td>500000</td>
-                            </tr>
-                            <tr>
-                                <td>C003</td>
-                                <td>Azaan</td>
-                                <td>Galle</td>
-                                <td>400000</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="customerTable"></tbody>
+
                     </table>
                 </div>
             </div>
@@ -198,7 +180,45 @@
 
     </section>
 
-    <!-- ==================================================================================== -->
+    <!-- ======================================Adding customers in to table============================================== -->
+    <script>
+        document.getElementById("save").addEventListener("click", function () {
+            //get values from text field
+            let id = document.getElementById("cusID").value;
+            let name = document.getElementById("cusName").value;
+            let address = document.getElementById("cusAddress").value;
+            let salary = document.getElementById("salary").value;
+
+            //catch the table body
+            let tBody = document.getElementById("customerTable");
+
+            //ok then, let's create the above row
+            let tr = document.createElement("tr");
+
+            //create  another fr columns
+            let col1 = document.createElement("td");
+            let col2 = document.createElement("td");
+            let col3 = document.createElement("td");
+            let col4 = document.createElement("td");
+
+            //set input fields values to the above created columns
+            col1.textContent = id;
+            col2.textContent = name;
+            col3.textContent = address;
+            col4.textContent = salary;
+
+            //set 4 columns to the previously created row
+
+            tr.appendChild(col1);
+            tr.appendChild(col2);
+            tr.appendChild(col3);
+            tr.appendChild(col4);
+
+            //set the row to the table body
+            tBody.appendChild(tr);
+
+        });
+    </script>
     <!-- ==================================================================================== -->
     <!-- Start Item section -->
 
@@ -245,24 +265,24 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="customerID" class="form-label">Item Code:</label>
-                                    <input type="text" class="form-control" id="exampleInputID">
+                                    <input type="text" class="form-control" id="txtCode">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label"> Item Name:</label>
-                                    <input type="text" class="form-control" id="exampleInputName:">
+                                    <input type="text" class="form-control" id="txtName">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerAddress" class="form-label">Unit Price:</label>
-                                    <input type="text" class="form-control" id="exampleInputAddress:">
+                                    <input type="text" class="form-control" id="txtPrice">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerSalary" class="form-label">Quentity:</label>
-                                    <input type="number" class="form-control" id="exampleInputSalary:">
+                                    <input type="number" class="form-control" id="txtQTY">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Save</button>
+                            <button type="button" class="btn btn-danger" id="itmsave">Save</button>
                             <button type="button" class="btn btn-warning">Renew</button>
                             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
                         </div>
@@ -287,28 +307,7 @@
                                 <th>Quantity</th>
                             </tr>
                         </thead>
-                        <tbody id="itemTable">
-                            <tr>
-                                <td>Itm001</td>
-                                <td>Samba</td>
-                                <td>130.00</td>
-                                <td>4</td>
-                            </tr>
-
-                            <tr>
-                                <td>Itm002</td>
-                                <td>Soap</td>
-                                <td>290.00</td>
-                                <td>2</td>
-                            </tr>
-
-                            <tr>
-                                <td>Itm003</td>
-                                <td>Fish</td>
-                                <td>400.00</td>
-                                <td>1</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="itemTable"></tbody>
                     </table>
                 </div>
             </div>
@@ -318,6 +317,44 @@
     </section>
 
     <!-- ==================================================================================== -->
+    <script>
+        document.getElementById("itmsave").addEventListener('click', function () {
+            //get all input from the textField
+            let code = document.getElementById("txtCode").value;
+            let name = document.getElementById("txtName").value;
+            let price = document.getElementById("txtPrice").value;
+            let qty = document.getElementById("txtQTY").value;
+
+            //catch the table body
+            let tBody = document.getElementById("itemTable");
+
+            //then creat above row
+            let tr = document.createElement("tr");
+
+            //create another for column
+            let col1 = document.createElement("td");
+            let col2 = document.createElement("td");
+            let col3 = document.createElement("td");
+            let col4 = document.createElement("td");
+
+            //set input values above creat ecolumn
+            col1.textContent = code;
+            col2.textContent=name;
+            col3.textContent=price;
+            col4.textContent=qty;
+
+            //set fro column  previously created row
+            tr.appendChild(col1);
+            tr.appendChild(col2);
+            tr.appendChild(col3)
+            tr.appendChild(col4);
+
+            //set the row to the table body
+            tBody.appendChild(tr);
+        });
+
+    </script>
+
     <!-- ==================================================================================== -->
     <!-- Start Order section -->
 
