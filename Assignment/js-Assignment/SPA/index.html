@@ -3,586 +3,591 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assects/bootsrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assects/styles/style.css">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="assects/bootsrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assects/styles/style.css" rel="stylesheet">
     <script src="assects/js/script.js"></script>
-
+    <script src="assects/iQuery/jquery-3.7.0.min.js"></script>
     <title>SPA-FoodCity</title>
 </head>
 
 <body>
 
-    <header>
-        <!-- navigation -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
-            <div class="container-fluid" style="background-color: #85C1E9;">
-                <a class="navbar-brand" href="#">
-                    <img src="assects/images/logohead.png" alt="Logo" width="120" height="40"
-                        class="d-inline-block align-text-top">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation" style="height: 35px; border: none;" ;>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#home" id="homeform">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#customer" id="customerform">Customer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#item" id="itemform">Item</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Orders
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#order" id="orderform">Order</a></li>
-                                <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- home section -->
-    <section id="home">
-        <div class="container text-center" style="padding-top: 120px;">
-            <div class="row">
-                <div class="col"
-                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
-                    <img src="assects/images/user.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
-                    <h2>000</h2>
-                </div>
-                <div class="col"
-                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
-                    <img src="assects/images/item.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
-                    <h2>000</h2>
-                </div>
-                <div class="col"
-                    style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
-                    <img src="assects/images/order.png" alt="..." style="height: 120px;margin: 30px;width: 120px;">
-                    <h2>000</h2>
-                </div>
+<header>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+        <div class="container-fluid" style="background-color: #85C1E9;">
+            <a class="navbar-brand" href="#">
+                <img alt="Logo" class="d-inline-block align-text-top" height="40" src="assects/images/logohead.png"
+                     width="120">
+            </a>
+            <button ; aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation" class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" style="height: 35px; border: none;" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link" href="#home" id="homeform">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#customer" id="customerform">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#item" id="itemform">Item</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                           role="button">
+                            Orders
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#order" id="orderform">Order</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!-- end home section -->
+    </nav>
+</header>
 
-    <!-- ==================================================================================== -->
-    <!-- ==================================================================================== -->
-
-
-    <!-- start customer section -->
-    <section id="customer">
-        <div class="row justify-content-around" style="height: max-content; padding-top: 40px;">
-            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-                <h4 class="text-center bg-success p-2 text-light">Search Customer</h4>
-                <form>
-                    <div class="mb-3 ms-3 me-3">
-                        <input class="form-control" id="custId" placeholder="Input Customer ID" type="text">
-                    </div>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-                    <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
-                    <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
-
-                </form>
+<!-- home section -->
+<section id="home">
+    <div class="container text-center" style="padding-top: 120px;">
+        <div class="row">
+            <div class="col"
+                 style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                <img alt="..." src="assects/images/user.png" style="height: 120px;margin: 30px;width: 120px;">
+                <h2>000</h2>
             </div>
+            <div class="col"
+                 style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                <img alt="..." src="assects/images/item.png" style="height: 120px;margin: 30px;width: 120px;">
+                <h2>000</h2>
+            </div>
+            <div class="col"
+                 style="height: 280px;width: 200px; background-color: whitesmoke;margin: 50px;border-radius: 30px;">
+                <img alt="..." src="assects/images/order.png" style="height: 120px;margin: 30px;width: 120px;">
+                <h2>000</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end home section -->
 
-            <!-- buttons -->
-            <div class="col-10 col-md-5 col-lg-5 mt-2">
-                <button class="btn btn-primary position-relative m-2" data-bs-target="#registerCustomer"
+<!-- ==================================================================================== -->
+<!-- ==================================================================================== -->
+
+
+<!-- start customer section -->
+<section id="customer">
+    <div class="row justify-content-around" style="height: max-content; padding-top: 40px;">
+        <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
+            <h4 class="text-center bg-success p-2 text-light">Search Customer</h4>
+            <form>
+                <div class="mb-3 ms-3 me-3">
+                    <input class="form-control" id="custId" placeholder="Input Customer ID" type="text">
+                </div>
+                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
+                <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+
+            </form>
+        </div>
+
+        <!-- buttons -->
+        <div class="col-10 col-md-5 col-lg-5 mt-2">
+            <button class="btn btn-primary position-relative m-2" data-bs-target="#registerCustomer"
                     data-bs-toggle="modal" id="btnRegister">Add Customer
-                </button>
-                <!-- <button class="btn btn-success position-relative m-2" data-bs-target="#updateCustomer"
-                    data-bs-toggle="modal">Update Customer
-                </button> -->
+            </button>
+            <!-- <button class="btn btn-success position-relative m-2" data-bs-target="#updateCustomer"
+                data-bs-toggle="modal">Update Customer
+            </button> -->
 
+        </div>
+    </div>
+
+    <!-- =============================AddCustomer============================== -->
+
+
+    <div class="col-10 col-md-5 col-lg-5">
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerCustomer"
+             tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: azure">
+                    <div class="modal-header" style="background-color:#85C1E9">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New
+                            Customer</h1>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerID">Customer ID:</label>
+                                <input class="form-control" id="cusID" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerName">Customer Name:</label>
+                                <input class="form-control" id="cusName" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerAddress">Customer Address:</label>
+                                <input class="form-control" id="cusAddress" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerSalary">Customer Salary:</label>
+                                <input class="form-control" id="salary" type="number">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" id="save" type="button">Save</button>
+                        <button class="btn btn-warning" type="button">Renew</button>
+                        <button class="btn btn-info" data-bs-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- =============================AddCustomer============================== -->
+
+    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+        <div class="col-10">
+
+            <div class="customeTableDiv">
+                <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                    <thead class="bg-success text-light text-center">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Salary</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="customerTable"></tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- ======================================Adding customers in to table============================================== -->
+<script>
+    document.getElementById("save").addEventListener("click", function () {
+        //get values from text field
+        let id = document.getElementById("cusID").value;
+        let name = document.getElementById("cusName").value;
+        let address = document.getElementById("cusAddress").value;
+        let salary = document.getElementById("salary").value;
+
+        //catch the table body
+        let tBody = document.getElementById("customerTable");
+
+        //ok then, let's create the above row
+        let tr = document.createElement("tr");
+
+        //create  another fr columns
+        let col1 = document.createElement("td");
+        let col2 = document.createElement("td");
+        let col3 = document.createElement("td");
+        let col4 = document.createElement("td");
+
+        //set input fields values to the above created columns
+        col1.textContent = id;
+        col2.textContent = name;
+        col3.textContent = address;
+        col4.textContent = salary;
+
+        //set 4 columns to the previously created row
+
+        tr.appendChild(col1);
+        tr.appendChild(col2);
+        tr.appendChild(col3);
+        tr.appendChild(col4);
+
+        //set the row to the table body
+        tBody.appendChild(tr);
+
+    });
+</script>
+<!-- ==================================================================================== -->
+<!-- Start Item section -->
+
+<section id="item">
+    <div class="row justify-content-around" style="height: max-content; padding-top: 40px;">
+        <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
+            <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
+            <form>
+                <div class="mb-3 ms-3 me-3">
+                    <input class="form-control" id="itemId" placeholder="Input Item ID" type="text">
+                </div>
+                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
+                <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+
+            </form>
+        </div>
+
+        <!-- buttons -->
+        <div class="col-10 col-md-5 col-lg-5 mt-2">
+            <button class="btn btn-primary position-relative m-2" data-bs-target="#registerItem"
+                    data-bs-toggle="modal" id="btnRegister">Add Item
+            </button>
 
 
-        <div class="col-10 col-md-5 col-lg-5">
-            <!-- Modal -->
-            <div class="modal fade" id="registerCustomer" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="background-color: azure">
-                        <div class="modal-header" style="background-color:#85C1E9">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New
-                                Customer</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- =============================AddItem============================== -->
+
+
+    <div class="col-10 col-md-5 col-lg-5">
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerItem"
+             tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background-color: azure">
+                    <div class="modal-header" style="background-color:#85C1E9">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New
+                            Item</h1>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerID">Item Code:</label>
+                                <input class="form-control" id="txtCode" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerName"> Item Name:</label>
+                                <input class="form-control" id="txtName" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerAddress">Unit Price:</label>
+                                <input class="form-control" id="txtPrice" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="customerSalary">Quentity:</label>
+                                <input class="form-control" id="txtQTY" type="number">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" id="itmsave" type="button">Save</button>
+                        <button class="btn btn-warning" type="button">Renew</button>
+                        <button class="btn btn-info" data-bs-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================== -->
+
+    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+        <div class="col-10">
+
+            <div class="itemTableDiv">
+                <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                    <thead class="bg-success text-light text-center">
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody id="itemTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<!-- ==================================================================================== -->
+<script>
+    $('#itmsave').click(function () {
+        //get all input from the textField
+        let code = $('#txtCode').val();
+        let name = $('#txtName').val();
+        let price = $('#txtPrice').val();
+        let qty = $('#txtQTY').val();
+
+        //catch the table body
+        let tBody = $('#itemTable');
+
+        //then creat above row
+        let tr = $('<tr>');
+
+        //create another for column
+        let col1 = $('<td>');
+        let col2 = $('<td>');
+        let col3 = $('<td>');
+        let col4 = $('<td>');
+
+        //set input values above creat ecolumn
+        col1.text(code);
+        col2.text(name);
+        col3.text(price);
+        col4.text(qty);
+
+        //set fro column  previously created row
+        tr.append(col1);
+        tr.append(col2);
+        tr.append(col3);
+        tr.append(col4);
+
+        //set the row to the table body
+        tBody.append(tr);
+
+    });
+
+</script>
+
+<!-- ==================================================================================== -->
+<!-- Start Order section -->
+
+<section id="order">
+
+    <!-- INvoice Details -->
+
+    <div class="container text-center" style="margin-top: 30px; background-color: aliceblue;">
+        <div class="row">
+            <div class="col" style="height: 330px; margin-right: 30px;">
+                <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
+                <!-- code here -->
+
+                <div class="container text-center" style="margin-top: 30px;">
+                    <div class="row">
+                        <div class="col">
+                            Order ID:
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
                         </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="customerID" class="form-label">Customer ID:</label>
-                                    <input type="text" class="form-control" id="cusID">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerName" class="form-label">Customer Name:</label>
-                                    <input type="text" class="form-control" id="cusName">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerAddress" class="form-label">Customer Address:</label>
-                                    <input type="text" class="form-control" id="cusAddress">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerSalary" class="form-label">Customer Salary:</label>
-                                    <input type="number" class="form-control" id="salary">
-                                </div>
-                            </form>
+                        <div class="col">
+                            Date :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="date">
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" id="save">Save</button>
-                            <button type="button" class="btn btn-warning">Renew</button>
-                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            Cus ID :
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected></option>
+                                <option value="1">C001</option>
+                                <option value="2">C002</option>
+                                <option value="3">C003</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            Cus Name:
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                        </div>
+
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col">
+                                    Salary :
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder=""
+                                           type="text">
+                                </div>
+                                <div class="col">
+                                    Address :
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder=""
+                                           type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- item Select -->
+
+            <div class="col" style="height: 330px; margin-right: 30px;">
+                <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
+                <!-- code here -->
+                <div class="container text-center" style="margin-top: 30px;">
+                    <div class="row">
+                        <div class="col">
+                            Item Code :
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected></option>
+                                <option value="1">Itm001</option>
+                                <option value="2">Itm002</option>
+                                <option value="3">Itm003</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            Item Name :
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected></option>
+                                <option value="1">Soap</option>
+                                <option value="2">KeeriSamba</option>
+                                <option value="3">Sampoo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            Price :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+
+                        </div>
+                        <div class="col">
+                            QtyOnHand :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            OrderQTY :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-danger" style="margin-top: 70px;" type="button">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- total part -->
+
+            <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #85C1E9;">
+                <!-- code here -->
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col" style="color: blue;font-size: 30px;">
+                            Total
+                            <label class="form-label" for="exampleFormControlInput1"
+                                   style="font-size: 40px;color: red;">1000.00</label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            Cash :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            Balance :
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" style="margin-top: 30px;"
+                                    type="button">Purchase
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
         <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
             <div class="col-10">
 
                 <div class="customeTableDiv">
                     <table class="table bg-light table-bordered w-100 h-100 table-hover">
                         <thead class="bg-success text-light text-center">
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Salary</th>
-                            </tr>
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Quentity</th>
+                            <th>Total</th>
+                        </tr>
                         </thead>
-
-                        <tbody id="customerTable"></tbody>
-
+                        <tbody id="customerTable">
+                        <tr>
+                            <td>Itm002</td>
+                            <td>Soap</td>
+                            <td>290.00</td>
+                            <td>2</td>
+                            <td>580.00</td>
+                        </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        </div>
+</section>
 
-    </section>
+<script src="assects/bootsrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ======================================Adding customers in to table============================================== -->
-    <script>
-        document.getElementById("save").addEventListener("click", function () {
-            //get values from text field
-            let id = document.getElementById("cusID").value;
-            let name = document.getElementById("cusName").value;
-            let address = document.getElementById("cusAddress").value;
-            let salary = document.getElementById("salary").value;
+<script>
 
-            //catch the table body
-            let tBody = document.getElementById("customerTable");
+    $('document').ready(function () {
+        $('#home').css('display', 'block');
+        $('#customer').css('display', 'none');
+        $('#item').css('display', 'none');
+        $('#order').css('display', 'none');
+    });
 
-            //ok then, let's create the above row
-            let tr = document.createElement("tr");
+    $('#homeform').click(function () {
+        $('#home').css('display', 'block');
+        $('#customer').css('display', 'none');
+        $('#item').css('display', 'none');
+        $('#order').css('display', 'none');
+    });
 
-            //create  another fr columns
-            let col1 = document.createElement("td");
-            let col2 = document.createElement("td");
-            let col3 = document.createElement("td");
-            let col4 = document.createElement("td");
+    $('#customerform').click(function () {
+        $('#home').css('display', 'none');
+        $('#customer').css('display', 'block');
+        $('#item').css('display', 'none');
+        $('#order').css('display', 'none');
+    });
 
-            //set input fields values to the above created columns
-            col1.textContent = id;
-            col2.textContent = name;
-            col3.textContent = address;
-            col4.textContent = salary;
+    $('#itemform').click(function () {
+        $('#home').css('display', 'none');
+        $('#customer').css('display', 'none');
+        $('#item').css('display', 'block');
+        $('#order').css('display', 'none');
+    });
 
-            //set 4 columns to the previously created row
+    $('#orderform').click(function () {
+        $('#home').css('display', 'none');
+        $('#customer').css('display', 'none');
+        $('#item').css('display', 'none');
+        $('#order').css('display', 'block');
+    });
 
-            tr.appendChild(col1);
-            tr.appendChild(col2);
-            tr.appendChild(col3);
-            tr.appendChild(col4);
-
-            //set the row to the table body
-            tBody.appendChild(tr);
-
-        });
-    </script>
-    <!-- ==================================================================================== -->
-    <!-- Start Item section -->
-
-    <section id="item">
-        <div class="row justify-content-around" style="height: max-content; padding-top: 40px;">
-            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-                <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
-                <form>
-                    <div class="mb-3 ms-3 me-3">
-                        <input class="form-control" id="itemId" placeholder="Input Item ID" type="text">
-                    </div>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-                    <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
-                    <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
-
-                </form>
-            </div>
-
-            <!-- buttons -->
-            <div class="col-10 col-md-5 col-lg-5 mt-2">
-                <button class="btn btn-primary position-relative m-2" data-bs-target="#registerItem"
-                    data-bs-toggle="modal" id="btnRegister">Add Item
-                </button>
-
-
-            </div>
-        </div>
-
-        <!-- =============================AddItem============================== -->
-
-
-        <div class="col-10 col-md-5 col-lg-5">
-            <!-- Modal -->
-            <div class="modal fade" id="registerItem" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content" style="background-color: azure">
-                        <div class="modal-header" style="background-color:#85C1E9">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Add New
-                                Item</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="customerID" class="form-label">Item Code:</label>
-                                    <input type="text" class="form-control" id="txtCode">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerName" class="form-label"> Item Name:</label>
-                                    <input type="text" class="form-control" id="txtName">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerAddress" class="form-label">Unit Price:</label>
-                                    <input type="text" class="form-control" id="txtPrice">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="customerSalary" class="form-label">Quentity:</label>
-                                    <input type="number" class="form-control" id="txtQTY">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" id="itmsave">Save</button>
-                            <button type="button" class="btn btn-warning">Renew</button>
-                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- =========================================================== -->
-
-        <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
-            <div class="col-10">
-
-                <div class="itemTableDiv">
-                    <table class="table bg-light table-bordered w-100 h-100 table-hover">
-                        <thead class="bg-success text-light text-center">
-                            <tr>
-                                <th>Code</th>
-                                <th>Name</th>
-                                <th>Unit Price</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                        <tbody id="itemTable"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <!-- ==================================================================================== -->
-    <script>
-        document.getElementById("itmsave").addEventListener('click', function () {
-            //get all input from the textField
-            let code = document.getElementById("txtCode").value;
-            let name = document.getElementById("txtName").value;
-            let price = document.getElementById("txtPrice").value;
-            let qty = document.getElementById("txtQTY").value;
-
-            //catch the table body
-            let tBody = document.getElementById("itemTable");
-
-            //then creat above row
-            let tr = document.createElement("tr");
-
-            //create another for column
-            let col1 = document.createElement("td");
-            let col2 = document.createElement("td");
-            let col3 = document.createElement("td");
-            let col4 = document.createElement("td");
-
-            //set input values above creat ecolumn
-            col1.textContent = code;
-            col2.textContent=name;
-            col3.textContent=price;
-            col4.textContent=qty;
-
-            //set fro column  previously created row
-            tr.appendChild(col1);
-            tr.appendChild(col2);
-            tr.appendChild(col3)
-            tr.appendChild(col4);
-
-            //set the row to the table body
-            tBody.appendChild(tr);
-        });
-
-    </script>
-
-    <!-- ==================================================================================== -->
-    <!-- Start Order section -->
-
-    <section id="order">
-
-        <!-- INvoice Details -->
-
-        <div class="container text-center" style="margin-top: 30px; background-color: aliceblue;">
-            <div class="row">
-                <div class="col" style="height: 330px; margin-right: 30px;">
-                    <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
-                    <!-- code here -->
-
-                    <div class="container text-center" style="margin-top: 30px;">
-                        <div class="row">
-                            <div class="col">
-                                Order ID:
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                            <div class="col">
-                                Date :
-                                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                Cus ID :
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected></option>
-                                    <option value="1">C001</option>
-                                    <option value="2">C002</option>
-                                    <option value="3">C003</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                Cus Name:
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col">
-                                        Salary :
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="">
-                                    </div>
-                                    <div class="col">
-                                        Address :
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                            placeholder="">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- item Select -->
-
-                <div class="col" style="height: 330px; margin-right: 30px;">
-                    <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
-                    <!-- code here -->
-                    <div class="container text-center" style="margin-top: 30px;">
-                        <div class="row">
-                            <div class="col">
-                                Item Code :
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected></option>
-                                    <option value="1">Itm001</option>
-                                    <option value="2">Itm002</option>
-                                    <option value="3">Itm003</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                Item Name :
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected></option>
-                                    <option value="1">Soap</option>
-                                    <option value="2">KeeriSamba</option>
-                                    <option value="3">Sampoo</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                Price :
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-
-                            </div>
-                            <div class="col">
-                                QtyOnHand :
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                OrderQTY :
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-danger" style="margin-top: 70px;">Add Item</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- total part -->
-
-                <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #85C1E9;">
-                    <!-- code here -->
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col" style="color: blue;font-size: 30px;">
-                                Total
-                                <label for="exampleFormControlInput1" class="form-label"
-                                    style="font-size: 40px;color: red;">1000.00</label>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                Cash :
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                Balance :
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn btn-primary"
-                                    style="margin-top: 30px;">Purchase</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
-                <div class="col-10">
-
-                    <div class="customeTableDiv">
-                        <table class="table bg-light table-bordered w-100 h-100 table-hover">
-                            <thead class="bg-success text-light text-center">
-                                <tr>
-                                    <th>Item Code</th>
-                                    <th>Item Name</th>
-                                    <th>Price</th>
-                                    <th>Quentity</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody id="customerTable">
-                                <tr>
-                                    <td>Itm002</td>
-                                    <td>Soap</td>
-                                    <td>290.00</td>
-                                    <td>2</td>
-                                    <td>580.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <script src="assects/bootsrap/js/bootstrap.bundle.min.js"></script>
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("home").style.display = 'inline-block';
-            document.getElementById("customer").style.display = 'none';
-            document.getElementById("item").style.display = 'none';
-            document.getElementById("order").style.display = 'none';
-        });
-        document.getElementById("homeform").addEventListener("click", function () {
-            document.getElementById("home").style.display = 'inline-block';
-            document.getElementById("customer").style.display = 'none';
-            document.getElementById("item").style.display = 'none';
-            document.getElementById("order").style.display = 'none';
-        });
-
-        document.getElementById("customerform").addEventListener("click", function () {
-            document.getElementById("home").style.display = 'none';
-            document.getElementById("customer").style.display = 'inline-block';
-            document.getElementById("item").style.display = 'none';
-            document.getElementById("order").style.display = 'none';
-        });
-        document.getElementById("itemform").addEventListener("click", function () {
-            document.getElementById("home").style.display = 'none';
-            document.getElementById("customer").style.display = 'none';
-            document.getElementById("item").style.display = 'inline-block';
-            document.getElementById("order").style.display = 'none';
-        });
-        document.getElementById("orderform").addEventListener("click", function () {
-            document.getElementById("home").style.display = 'none';
-            document.getElementById("customer").style.display = 'none';
-            document.getElementById("item").style.display = 'none';
-            document.getElementById("order").style.display = 'inline-block';
-        });
-
-    </script>
+</script>
 </body>
 
 </html>
