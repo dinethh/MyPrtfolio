@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight-Rider</title>
+    <style>
+        * {
+            background-color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        section {
+            display: flex;
+            width: 1000px;
+            height: 70px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+        }
+
+        section>div {
+            height: 100%;
+            width: 200px;
+        }
+
+        section>div:first-child {
+            border-radius: 20px 0 0 20px;
+        }
+
+        section>div:last-child {
+            border-radius: 0 20px 20px 0;
+        }
+
+        #start-btn,
+        #stop-btn {
+            position: relative;
+            top: 18rem;
+            left: 33rem;
+            margin-right: 10px;
+            font-size: 14px;
+            border: 1px solid black;
+            opacity: 1;
+            animation-name: btns;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            transition: all;
+        }
+
+        @keyframes btns {
+            0% {
+                left: 0;
+                width: 0px;
+                height: 0px;
+            }
+
+            100% {
+                opacity: 1;
+                width: 75px;
+                height: 35px;
+                color: white;
+            }
+        }
+
+        #start-btn {
+            background-color: green;
+        }
+
+        #stop-btn {
+            background-color: red;
+        }
+
+        h2 {
+            position: relative;
+            margin-left: 560px;
+            margin-top: 50px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>KnightRider</h2>
+    <div></div>
+    <section>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </section>
+    <div></div>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+    <script src="assects/jquery-3.6.0.min.js"></script>
+    <script>
+
+        let colors = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", '#ffbaba', "#ff5252", "#ff0000", "#a70000"];
+        let colors2 = ["#000000", "#000000", "#000000", "#000000", "#000000", "#000000", "#000000", '#a70000', "#ff0000", "#ff5252", "#ffbaba"];
+
+        let section = document.querySelector("section");
+        let divArray = section.getElementsByTagName("div");
+
+        let count = 0;
+        let reverse = true;
+        let interval;
+
+
+        $(document).ready(function () {
+            clearInterval(interval);
+            knightRider();
+
+            $("#start-btn").click(function () {
+                clearInterval(interval);
+                knightRider();
+            });
+        });
+
+        function knightRider() {
+            interval = setInterval(function () {
+
+                if (reverse) {
+                    for (let i = 0; i < divArray.length; i++) {
+                        divArray[i].style.backgroundColor = colors[i];
+                    }
+
+                    let lastValue = colors.pop();
+                    colors.unshift(lastValue);
+                    count++;
+
+                    if (count == 12) {
+                        reverse = false;
+                    }
+
+                } if (reverse == false) {
+
+                    let lastColor = colors2.shift();
+                    colors2.push(lastColor);
+
+                    for (let i = 0; i < divArray.length; i++) {
+                        divArray[i].style.backgroundColor = colors2[i];
+                    }
+                    count--;
+
+                    if (count == 1) {
+                        reverse = true;
+                    }
+                }
+
+            }, 50);
+        }
+
+        document.querySelector("#stop-btn").addEventListener('click', function () {
+            clearInterval(interval);
+        });
+        document.querySelector("#start-btn").addEventListener('click', function () {
+            knightRider();
+        });
+    </script>
+</body>
+
+</html>
