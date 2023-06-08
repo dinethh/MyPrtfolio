@@ -93,6 +93,8 @@
                     </div>
                     <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
                     <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
+                    <button class="btn btn-secondary ms-3 mb-3 ms-md-3 ms-lg-3" data-bs-target="#r"
+                        data-bs-toggle="modal" id="btnLoardAll">Loard all</button>
                     <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
 
                 </form>
@@ -103,10 +105,6 @@
                 <button class="btn btn-primary position-relative m-2" data-bs-target="#registerCustomer"
                     data-bs-toggle="modal" id="btnRegister">Add Customer
                 </button>
-                <!-- <button class="btn btn-success position-relative m-2" data-bs-target="#updateCustomer"
-                data-bs-toggle="modal">Update Customer
-            </button> -->
-
             </div>
         </div>
 
@@ -182,7 +180,7 @@
     <!-- ======================================Adding customers in to table============================================== -->
     <script>
 
-
+        let customerDB = [];
 
         $("#save").click(function () {
 
@@ -191,32 +189,45 @@
             let address = $("#cusAddress").val();
             let salary = $("#salary").val();
 
-            let tBody = $("#customerTable");
+            let tbody = $('#customerTable');
+            let tr = $('<tr> <td>' + id + '</td><td>' + name + '</td><td>' + address + '</td><td>' + salary + '</td> </tr>')
+            tbody.append(tr);
+            // array.push({ id: id, name: name, address: address, salary: salary });
 
-            let tr = $("<tr>");
+            let cusObj = {
+                id: id,
+                name: name,
+                address: address,
+                salary: salary
+            }
+            customerDB.push(cusObj);
+            // console.log(cusArray);
 
-            let col1 = $("<td>");
-            let col2 = $("<td>");
-            let col3 = $("<td>");
-            let col4 = $("<td>");
+        });
 
-            col1.text(id);
-            col2.text(name);
-            col3.text(address);
-            col4.text(salary);
+        $("#btnLoardAll").click(function () {
+            $('#customerTable').empty();
+            //get all customers
+            for (let i = 0; i < customerDB.length; i++) {
+                let id = customerDB[i].id;
+                let name = customerDB[i].name;
+                let address = customerDB[i].address;
+                let salary = customerDB[i].salary;
 
+                let row = `<tr>
+                     <td>${id}</td>
+                     <td>${name}</td>
+                     <td>${address}</td>
+                     <td>${salary}</td>
+                    </tr>`;
 
-            tr.append(col1);
-            tr.append(col2);
-            tr.append(col3);
-            tr.append(col4);
-
-            tBody.append(tr);
-
-
-            myTable_header.appendChild(tr);
+                // //and then append the row to tableBody
+                $("#customerTable").append(row);
+            }
         });
     </script>
+
+
     <!-- ==================================================================================== -->
     <!-- Start Item section -->
 
@@ -230,6 +241,8 @@
                     </div>
                     <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
                     <button class="btn btn-danger ms-3 mb-3 ms-md-3 ms-lg-3" type="button">Delete</button>
+                    <button class="btn btn-secondary ms-3 mb-3 ms-md-3 ms-lg-3" data-bs-target="#r"
+                        data-bs-toggle="modal" id="btnLoardAll">Loard all</button>
                     <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
 
                 </form>
@@ -316,6 +329,8 @@
 
     <!-- ==================================================================================== -->
     <script>
+        var itemDB = [];
+
         $('#itmsave').click(function () {
             //get all input from the textField
             let code = $('#txtCode').val();
@@ -323,33 +338,63 @@
             let price = $('#txtPrice').val();
             let qty = $('#txtQTY').val();
 
-            //catch the table body
-            let tBody = $('#itemTable');
+            /*   //catch the table body
+              let tBody = $('#itemTable');
+  
+              //then creat above row
+              let tr = $('<tr>');
+  
+              //create another for column
+              let col1 = $('<td>');
+              let col2 = $('<td>');
+              let col3 = $('<td>');
+              let col4 = $('<td>');
+  
+              //set input values above creat ecolumn
+              col1.text(code);
+              col2.text(name);
+              col3.text(price);
+              col4.text(qty);
+  
+              //set fro column  previously created row
+              tr.append(col1);
+              tr.append(col2);
+              tr.append(col3);
+              tr.append(col4);
+  
+              //set the row to the table body
+              tBody.append(tr); */
+            let tbody = $('#itemTable');
+            let tr = $('<tr> <td>' + code + '</td><td>' + name + '</td><td>' + price + '</td><td>' + qty + '</td> </tr>');
+            tbody.append(tr);
+            let itemObj = {
+                code: code,
+                name: name,
+                price: price,
+                qty: qty
+            }
+            itemDB.push(itemObj);
+        });
 
-            //then creat above row
-            let tr = $('<tr>');
+        $("#btnLoardAll").click(function () {
+            $('#itemTable').empty();
+            //get all customers
+            for (let i = 0; i < itemDB.length; i++) {
+                let code = itemDB[i].code;
+                let name = itemDB[i].name;
+                let price = itemDB[i].price;
+                let qty = itemDB[i].qty;
 
-            //create another for column
-            let col1 = $('<td>');
-            let col2 = $('<td>');
-            let col3 = $('<td>');
-            let col4 = $('<td>');
+                let row = `<tr>
+                     <td>${code}</td>
+                     <td>${name}</td>
+                     <td>${price}</td>
+                     <td>${qty}</td>
+                    </tr>`;
 
-            //set input values above creat ecolumn
-            col1.text(code);
-            col2.text(name);
-            col3.text(price);
-            col4.text(qty);
-
-            //set fro column  previously created row
-            tr.append(col1);
-            tr.append(col2);
-            tr.append(col3);
-            tr.append(col4);
-
-            //set the row to the table body
-            tBody.append(tr);
-
+                // //and then append the row to tableBody
+                $("#itemTable").append(row);
+            }
         });
 
     </script>
@@ -383,16 +428,21 @@
                         <div class="row">
                             <div class="col">
                                 Cus ID :
-                                <select aria-label="Default select example" class="form-select">
+                                <select aria-label="Default select example" class="form-select" id="cId">
                                     <option selected></option>
-                                    <option value="1">C001</option>
+                                    <!-- <option value="1">C001</option>
                                     <option value="2">C002</option>
-                                    <option value="3">C003</option>
+                                    <option value="3">C003</option> -->
                                 </select>
                             </div>
                             <div class="col">
                                 Cus Name:
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <select aria-label="Default select example" class="form-select" id="cName">
+                                    <option selected></option>
+                                    <!-- <option value="1">C001</option>
+                                    <option value="2">C002</option>
+                                    <option value="3">C003</option> -->
+                                </select>
                             </div>
 
                             <div class="container text-center">
@@ -423,24 +473,56 @@
                         <div class="row">
                             <div class="col">
                                 Item Code :
-                                <select aria-label="Default select example" class="form-select">
-                                    <option selected></option>
-                                    <option value="1">Itm001</option>
-                                    <option value="2">Itm002</option>
-                                    <option value="3">Itm003</option>
+                                <select aria-label="Default select example" class="form-select" id="icode">
+                                    <option value=""></option>
+
                                 </select>
                             </div>
+
                             <div class="col">
                                 Item Name :
-                                <select aria-label="Default select example" class="form-select">
+                                <select aria-label="Default select example" class="form-select" id="iName">
                                     <option selected></option>
-                                    <option value="1">Soap</option>
-                                    <option value="2">KeeriSamba</option>
-                                    <option value="3">Sampoo</option>
+
                                 </select>
                             </div>
                         </div>
                     </div>
+
+                    <script>
+                        //get items codes
+                        $('#icode').click(function () {
+
+                            $('#icode').empty();
+                            for (const itemC of itemDB) {
+                                $('#icode').append(`<option>${itemC.code}</option>`);
+                            }
+                        });
+
+                        //get items Names
+                        $('#iName').click(function () {
+                            $('#iName').empty();
+                            for (const itemN of itemDB) {
+                                $('#iName').append(`<option>${itemN.name}</option>`);
+                            }
+                        });
+
+                        //get Customer ID
+                        $('#cId').click(function () {
+                            $('#cId').empty();
+                            for (const cusid of customerDB) {
+                                $('#cId').append(`<option>${cusid.id}</option>`);
+                            }
+                        });
+
+                        //get Customer Name
+                        $('#cName').click(function () {
+                            $('#cName').empty();
+                            for (const cusName of customerDB) {
+                                $('#cName').append(`<option>${cusName.name}</option>`);
+                            }
+                        });
+                    </script>
                     <div class="container text-center">
                         <div class="row">
                             <div class="col">
