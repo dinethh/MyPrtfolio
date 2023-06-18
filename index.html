@@ -28,6 +28,30 @@
     <script src="/MyPrtfolio/Assignment/js-Assignment/KNIGHT/assects/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 
+    <style>
+        #loader {
+            transition: opacity 1s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #000000;
+        }
+        #loader>div {
+            width: 290px;
+            height: 290px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background: url("assets/images/loader.gif");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 
 </head>
 
@@ -589,7 +613,10 @@
             </div> <!-- end rowContact -->
         </section>
         <!-- End contact -->
-    </main>
+        <div id="loader">
+            <div></div>
+        </div>
+ </main>
     <!--end main -->
 
 
@@ -619,8 +646,17 @@
         </aside>
         <h5>Developed by Dineth Panditha&copy;</h5>
     </footer>
-
    
+      
+    <script>
+        let loader = document.getElementById("loader");
+        //this is it. this will execute after the window is fully loaded
+        window.addEventListener("load", function () {
+            console.log("This message will print just after fully loading the website")
+            //hide the loader
+            loader.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
