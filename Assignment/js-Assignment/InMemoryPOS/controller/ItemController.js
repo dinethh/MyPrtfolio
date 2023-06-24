@@ -1,5 +1,4 @@
 
-getAllItems();
 
 
 $("#itmSave").click(function () {
@@ -10,7 +9,7 @@ $("#itmSave").click(function () {
     } else {
         alert("Error");
     }
- 
+
 });
 
 $(document).ready(function () {
@@ -51,19 +50,20 @@ $('#itmAdd').click(function () {
 });
 
 $("#itmGetAll").click(function () {
- getAllItems();
+    getAllItems();
+    loadAllItemCode();
 });
 
 //bind tr events for getting back data of the rows to text fields
 function bindTrEvents() {
     $('#itemTable>tr').click(function () {
-     
+
         let code = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
         let price = $(this).children().eq(2).text();
         let qty = $(this).children().eq(3).text();
 
-      
+
         $("#itmCode").val(code);
         $("#itmName").val(name);
         $("#itmPrice").val(price);
@@ -73,7 +73,7 @@ function bindTrEvents() {
         $("#itmName").prop('disabled', false);
         $("#itmPrice").prop('disabled', false);
         $("#itmQTY").prop('disabled', false);
-     
+
 
     })
 }
@@ -97,7 +97,7 @@ $("#itmDelete").click(function () {
     $("#itmName").prop('disabled', true);
     $("#itmPrice").prop('disabled', true);
     $("#itmQTY").prop('disabled', true);
-     itmCount();
+    itmCount();
 });
 
 //update  btn event
@@ -180,7 +180,7 @@ function deleteItem(code) {
 
 function searchItems(code) {
     return itemDB.find(function (item) {
-       
+
         return item.code == code;
     });
 }
@@ -192,7 +192,7 @@ function updateItem(code) {
         let consent = confirm("Do you really want to update this Item.?");
         if (consent) {
             let item = searchItems(code);
-        
+
 
             let itemName = $("#itmName").val();
             let itemPrice = $("#itmPrice").val();

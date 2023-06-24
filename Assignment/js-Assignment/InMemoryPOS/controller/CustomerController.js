@@ -51,6 +51,7 @@ $('#cusAdd').click(function(){
 
 $("#cusGetAll").click(function () {
     getAllCustomers();
+    loadAllCusID();
 });
 
 
@@ -212,6 +213,4 @@ function updateCustomer(id) {
     }
 
 }
-
-
 

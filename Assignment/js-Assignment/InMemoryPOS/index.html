@@ -45,7 +45,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#order" id="orderform">Order</a></li>
-                                <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                <li><a class="dropdown-item" href="#Details" id="orderDetailsForm">Order Details</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -83,11 +83,14 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-6" style="margin-top: 25px;width: 470px;">
-                  <div class="container text-center" style="background-color:#F8F9F9;padding-bottom: 30px;padding-top: 10px; margin-top: 10px;box-shadow: 1px 2px 5px 4px #EAECEE;">
+                    <div class="container text-center"
+                        style="background-color:#F8F9F9;padding-bottom: 30px;padding-top: 10px; margin-top: 10px;box-shadow: 1px 2px 5px 4px #EAECEE;">
                         <h5 class="text-center p-2 text-light" style="background-color:#3498DB;">Customer Form
-                            
+
                             <button type="button" class="btn btn-primary"
-                            style="width: 55px; margin-left: 160px;border-radius: 50%;height: 55px;font-weight: bold;" id="cusAdd">Add</button></h5>
+                                style="width: 55px; margin-left: 160px;border-radius: 50%;height: 55px;font-weight: bold;"
+                                id="cusAdd">Add</button>
+                        </h5>
 
                         <div class="row" style="margin: 10px;">
                             <div class="col-4">
@@ -101,7 +104,7 @@
 
                         <div class="row" style="margin: 10px;">
                             <div class="col-4">
-                                <label class="form-label" for="customerName" >Name</label>
+                                <label class="form-label" for="customerName">Name</label>
                             </div>
                             <div class="col">
                                 <input class="form-control" id="cusName" type="text">
@@ -131,16 +134,18 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="btn btn-primary" style="font-weight: bold;" id="cusSave">Save</button>
-                                <button type="button" class="btn btn-success" style="font-weight: bold;" id="cusUpdate">Update</button>
-                                <button type="button" class="btn btn-secondary"
-                                style="font-weight: bold;" id="cusGetAll">GetAll</button>
-                                <button type="button" class="btn btn-danger"
-                                style="width: 66px;" id="cusDelete">Delete</button>
+                                <button type="button" class="btn btn-primary" style="font-weight: bold;"
+                                    id="cusSave">Save</button>
+                                <button type="button" class="btn btn-success" style="font-weight: bold;"
+                                    id="cusUpdate">Update</button>
+                                <button type="button" class="btn btn-secondary" style="font-weight: bold;"
+                                    id="cusGetAll">GetAll</button>
+                                <button type="button" class="btn btn-danger" style="width: 66px;"
+                                    id="cusDelete">Delete</button>
                                 <button type="button" class="btn btn-warning" id="cusClear">Clear</button>
-                       
+
                             </div>
-                           
+
                         </div>
 
                     </div>
@@ -148,7 +153,7 @@
                 </div>
                 <div class="col-7">
                     <!-- Table here -->
-                    <table class="table table-hover" style="margin-top: 30px;margin-left: 60px;" >
+                    <table class="table table-hover" style="margin-top: 30px;margin-left: 60px;">
                         <thead>
                             <tr class="table-primary">
                                 <th scope="col">CusID</th>
@@ -179,69 +184,74 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-6" style="margin-top: 25px;width: 470px;">
-                    <div class="container text-center" style="background-color:#F8F9F9;padding-bottom: 30px;padding-top: 10px; margin-top: 10px;box-shadow: 1px 2px 5px 4px #EAECEE;">
-                          <h5 class="text-center p-2 text-light" style="background-color:#3498DB;">Item Form
-                              
-                              <button type="button" class="btn btn-primary"
-                              style="width: 55px; margin-left: 160px;border-radius: 50%;height: 55px;font-weight: bold;" id="itmAdd">Add</button></h5>
-  
-                          <div class="row" style="margin: 10px;">
-                              <div class="col-4">
-                                  <label class="form-label" for="itmCode">ItmCode</label>
-                              </div>
-                              <div class="col">
-                                  <input class="form-control" id="itmCode" type="text">
-                                  <p><small class="text-danger" id="itmCodeError"></small></p>
-                              </div>
-                          </div>
-  
-                          <div class="row" style="margin: 10px;">
-                              <div class="col-4">
-                                  <label class="form-label" for="itmName" >Name</label>
-                              </div>
-                              <div class="col">
-                                  <input class="form-control" id="itmName" type="text">
-                                  <p><small class="text-danger" id="itmNameError"></small></p>
-                              </div>
-                          </div>
-  
-                          <div class="row" style="margin: 10px;">
-                              <div class="col-4">
-                                  <label class="form-label" for="itmPrice">Price</label>
-                              </div>
-                              <div class="col">
-                                  <input class="form-control" id="itmPrice" type="text">
-                                  <p><small class="text-danger" id="itmPriceError"></small></p>
-                              </div>
-                          </div>
-  
-                          <div class="row" style="margin: 10px;">
-                              <div class="col-4">
-                                  <label class="form-label" for="itmQTY">QTY</label>
-                              </div>
-                              <div class="col">
-                                  <input class="form-control" id="itmQTY" type="number">
-                                  <p><small class="text-danger" id="itmQTYError"></small></p>
-                              </div>
-                          </div>
-  
-                          <div class="row">
-                              <div class="col-12">
-                                  <button type="button" class="btn btn-primary" style="font-weight: bold;" id="itmSave">Save</button>
-                                  <button type="button" class="btn btn-success" style="font-weight: bold;" id="itmUpdate">Update</button>
-                                  <button type="button" class="btn btn-secondary"
-                                  style="font-weight: bold;" id="itmGetAll">GetAll</button>
-                                  <button type="button" class="btn btn-danger"
-                                  style="width: 66px;" id="itmDelete">Delete</button>
-                                  <button type="button" class="btn btn-warning" id="itmClear">Clear</button>
-                         
-                              </div>
-                             
-                          </div>
-  
-                      </div>
-  
-                  </div>
+                    <div class="container text-center"
+                        style="background-color:#F8F9F9;padding-bottom: 30px;padding-top: 10px; margin-top: 10px;box-shadow: 1px 2px 5px 4px #EAECEE;">
+                        <h5 class="text-center p-2 text-light" style="background-color:#3498DB;">Item Form
+
+                            <button type="button" class="btn btn-primary"
+                                style="width: 55px; margin-left: 160px;border-radius: 50%;height: 55px;font-weight: bold;"
+                                id="itmAdd">Add</button>
+                        </h5>
+
+                        <div class="row" style="margin: 10px;">
+                            <div class="col-4">
+                                <label class="form-label" for="itmCode">ItmCode</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" id="itmCode" type="text">
+                                <p><small class="text-danger" id="itmCodeError"></small></p>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin: 10px;">
+                            <div class="col-4">
+                                <label class="form-label" for="itmName">Name</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" id="itmName" type="text">
+                                <p><small class="text-danger" id="itmNameError"></small></p>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin: 10px;">
+                            <div class="col-4">
+                                <label class="form-label" for="itmPrice">Price</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" id="itmPrice" type="text">
+                                <p><small class="text-danger" id="itmPriceError"></small></p>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin: 10px;">
+                            <div class="col-4">
+                                <label class="form-label" for="itmQTY">QTY</label>
+                            </div>
+                            <div class="col">
+                                <input class="form-control" id="itmQTY" type="number">
+                                <p><small class="text-danger" id="itmQTYError"></small></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary" style="font-weight: bold;"
+                                    id="itmSave">Save</button>
+                                <button type="button" class="btn btn-success" style="font-weight: bold;"
+                                    id="itmUpdate">Update</button>
+                                <button type="button" class="btn btn-secondary" style="font-weight: bold;"
+                                    id="itmGetAll">GetAll</button>
+                                <button type="button" class="btn btn-danger" style="width: 66px;"
+                                    id="itmDelete">Delete</button>
+                                <button type="button" class="btn btn-warning" id="itmClear">Clear</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
                 <div class="col-7">
                     <!-- Table here -->
                     <table class="table table-hover" style="margin-top: 30px;margin-left: 60px;">
@@ -254,12 +264,12 @@
                             </tr>
                         </thead>
                         <tbody id="itemTable">
-                            <tr>
+                            <!-- <tr>
                                 <th>Itm001</th>
                                 <td>Rice</td>
                                 <td>200.00</td>
                                 <td>10</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -268,27 +278,35 @@
     </section>
 
     <!-- ===================================== Order =============================================== -->
-     <!-- Start Order section -->
+    <!-- Start Order section -->
 
-     <section id="order">
+    <section id="order">
 
         <!-- INvoice Details -->
 
         <div class="container text-center" style="margin-top: 30px; background-color: aliceblue;">
             <div class="row">
                 <div class="col" style="height: 330px; margin-right: 30px;">
-                    <h3 class="" style="color: white; width: 400px;background-color: #3498DB;">Invoice Details</h3>
+                    <h3 class=""
+                        style="color: white; width: 400px;background-color: #3498DB;height: 32px;margin-bottom: 20px;">
+                        Invoice Details
+
+                        <button type="button" class="btn btn-primary"
+                            style="width: 130px; margin-left: 200px;margin-top: 20px; height: 35px;font-weight: bold;"
+                            id="addInvoice">Add Invoice</button></h5>
+
+                    </h3>
                     <!-- code here -->
 
-                    <div class="container text-center" style="margin-top: 30px;">
+                    <div class="container text-center" style="margin-top: 80px;">
                         <div class="row">
                             <div class="col">
                                 Order ID:
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" id="odrID" readonly placeholder="" type="text">
                             </div>
                             <div class="col">
                                 Date :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="date">
+                                <input class="form-control" id="odrDate" readonly type="text">
                             </div>
                         </div>
                     </div>
@@ -296,33 +314,25 @@
                         <div class="row">
                             <div class="col">
                                 Cus ID :
-                                <select aria-label="Default select example" class="form-select" id="cId">
-                                    <option selected></option>
-                                    <!-- <option value="1">C001</option>
-                                    <option value="2">C002</option>
-                                    <option value="3">C003</option> -->
+                                <select aria-label="Default select example" class="form-select" id="customerId">
+
                                 </select>
                             </div>
                             <div class="col">
                                 Cus Name:
-                                <select aria-label="Default select example" class="form-select" id="cName">
-                                    <option selected></option>
-                                    <!-- <option value="1">C001</option>
-                                    <option value="2">C002</option>
-                                    <option value="3">C003</option> -->
-                                </select>
+                                <input class="form-control" id="customerName" readonly placeholder="" type="text">
                             </div>
 
                             <div class="container text-center">
                                 <div class="row">
                                     <div class="col">
                                         Salary :
-                                        <input class="form-control" id="exampleFormControlInput1" placeholder=""
+                                        <input class="form-control" id="customerSalary" readonly placeholder=""
                                             type="text">
                                     </div>
                                     <div class="col">
                                         Address :
-                                        <input class="form-control" id="exampleFormControlInput1" placeholder=""
+                                        <input class="form-control" id="customerAddress" readonly placeholder=""
                                             type="text">
                                     </div>
                                 </div>
@@ -341,18 +351,15 @@
                         <div class="row">
                             <div class="col">
                                 Item Code :
-                                <select aria-label="Default select example" class="form-select" id="icode">
-                                    <option value=""></option>
-
-                                </select>
+                                <select aria-label="Default select example" class="form-select"
+                                id="icode">
+                        </select>
+                               
                             </div>
 
                             <div class="col">
                                 Item Name :
-                                <select aria-label="Default select example" class="form-select" id="itmName">
-                                    <option selected></option>
-
-                                </select>
+                                <input class="form-control" id="iName" readonly placeholder="" type="text">
                             </div>
                         </div>
                     </div>
@@ -361,12 +368,12 @@
                         <div class="row">
                             <div class="col">
                                 Price :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" id="price" readonly placeholder="" type="text">
 
                             </div>
                             <div class="col">
                                 QtyOnHand :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" id="qtyOnHand" readonly placeholder="" type="text">
 
                             </div>
 
@@ -377,11 +384,12 @@
                         <div class="row">
                             <div class="col">
                                 OrderQTY :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" id="buyQTY" placeholder="" type="number">
 
                             </div>
                             <div class="col">
-                                <button class="btn btn-danger" style="margin-top: 70px;" type="button">Add Item</button>
+                                <button class="btn btn-danger" style="margin-top: 70px;" type="button" id="addCart">Add
+                                    Item</button>
                             </div>
                         </div>
                     </div>
@@ -398,8 +406,7 @@
                         <div class="row">
                             <div class="col" style="color: blue;font-size: 30px;">
                                 Total
-                                <label class="form-label" for="exampleFormControlInput1"
-                                    style="font-size: 40px;color: red;">1000.00</label>
+                                <input style="font-size: 36px;color: red;" readonly class="form-control"  id="total" placeholder="" type="text">
 
                             </div>
                         </div>
@@ -409,7 +416,7 @@
                         <div class="row">
                             <div class="col">
                                 Cash :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" style="font-size: 25px;color:blue;" id="cash" placeholder="" type="text">
                             </div>
                         </div>
                     </div>
@@ -418,7 +425,7 @@
                         <div class="row">
                             <div class="col">
                                 Balance :
-                                <input class="form-control" id="exampleFormControlInput1" placeholder="" type="text">
+                                <input class="form-control" style="font-size: 25px;color:blue;" id="balance" placeholder="" type="text">
                             </div>
                         </div>
                     </div>
@@ -426,7 +433,7 @@
                     <div class="container text-center">
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-primary" style="margin-top: 30px;" type="button">Purchase
+                                <button class="btn btn-primary" style="margin-top: 30px;" type="button" id="purchase">Purchase
                                 </button>
                             </div>
                         </div>
@@ -447,14 +454,14 @@
                                     <th>Total</th>
                                 </tr>
                             </thead>
-                            <tbody id="customerTable">
-                                <tr>
-                                    <td>Itm002</td>
+                            <tbody id="cartTable">
+                                <!-- <tr>
+                                    <td>Itm000</td>
                                     <td>Soap</td>
                                     <td>290.00</td>
                                     <td>2</td>
                                     <td>580.00</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -463,37 +470,62 @@
     </section>
     <!-- ==================================================================================== -->
 
+ <!-- order detail -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <section id="Details">
+ 
+    <div class="container">
+        <div class="row">
+          <div class="col-10">
+            <div class="customeTableDiv">
+                <h3 class="" style="color: white;width: 165px; background-color: #3498DB;">Order Detais</h3>
+                <table class="table bg-light table-bordered w-100 h-100 table-hover" style="margin-right: 20px;margin-left: 20px;">
+                    <thead class="bg-success text-light text-center">
+                        <tr class="table-primary">
+                            <th>OrderID</th>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>UnitPrice</th>
+                            <th>Quentity</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderDetailsTable">
+                        
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          <div class="col-sm">
+          
+          </div>
+         </div>
+      </div>
+ </section>
 
 
 
     <script src="assects/iQuery/jquery-3.7.0.min.js"></script>
     <script src="assects/bootsrap/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="db/db.js"></script>
     <script src="controller/HomeController.js"></script>
     <script src="controller/CustomerController.js"></script>
     <script src="model/CustomerDTO.js"></script>
     <script src="controller/validations/CustomerValidation.js"></script>
+    <script src="assects/iQuery/jquery-3.7.0.min.js"></script>
+    <script src="controller/OrderController.js"></script>
+    <script src="controller/validations/OrderValidation.js"></script>
+    <script src="model/OrderDTO.js"></script>
 
     <script src="controller/ItemController.js"></script>
     <script src="controller/validations/ItemValidation.js"></script>
     <script src="model/ItemDTO.js"></script>
+    
+    <script src="model/OrderDetailsDTO.js"></script>
    
+ 
 </body>
 
 </html>
