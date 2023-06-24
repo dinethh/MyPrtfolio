@@ -730,11 +730,11 @@ body>header>menu>div>aside>ul>li>a:hover {
 
 .gallery div img {
     width: 100%;
-
+    border-radius: 20px;
 }
 
 .gallery div img:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 
 }
 
