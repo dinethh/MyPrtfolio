@@ -11,7 +11,7 @@
 
 <h3>Deployment</h3>
 GitHub Pages : https://dinethh.github.io/MyPrtfolio/ <br> <br>
-* 🔗 <a href="https://drive.google.com/file/d/1sAV642hCBrNzIzhQS27niPNU34X9Q9St/view?usp=sharing " target="_blank">Portfolio Site-Map</a> <br>
+* 🔗 <a href="https://drive.google.com/file/d/1HO5N_fDHC6I0x071OTtgw8dUJNmFdm7o/view?usp=sharing" target="_blank">Portfolio Site-Map</a> <br>
 * 🔗 <a href="https://drive.google.com/file/d/1HWs7hsJDQky17J69XtaunUR72Woz6QuD/view?usp=sharing" target="_blank">Portfolio WireFrame</a> <br>
 * 🔗 <a href="https://www.figma.com/file/Ez3zsmvqGtDvkf4bQa6B1O/Mock-up?type=design&node-id=0-1&mode=design&t=rzRXrTs5wlgVgURj-0" target="_blank">Portfolio MockUp</a> <br><br>
 <h3> Web POS Using CSS FrameWorks</h3>
